@@ -153,7 +153,18 @@
   * {
     @apply border-border;
   }
+
+  html {
+    @apply antialiased;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground m-0 p-0;
+  }
+
+  /* Ensure perfect centering */
+  #__next,
+  body > div:first-child {
+    @apply min-h-screen;
   }
 }

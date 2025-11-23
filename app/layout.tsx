@@ -121,11 +121,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen antialiased">
+      <body className="min-h-screen antialiased flex flex-col">
         <ClientHeader />
-        <main className="container py-8">{children}</main>
-        <footer className="border-t py-6 md:py-0">
-          <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
+        <main className="container flex-1 py-8 md:py-12">{children}</main>
+        <footer className="border-t">
+          <div className="container flex flex-col items-center justify-between gap-4 py-6 md:h-20 md:flex-row">
             <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
               Built with ❤️ for Korean developers.
             </p>
