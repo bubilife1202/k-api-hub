@@ -31,7 +31,7 @@ export default function Home() {
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false)
   const [sortBy, setSortBy] = useState<'name' | 'provider' | 'auth'>('name')
   const [currentPage, setCurrentPage] = useState(1)
-  const itemsPerPage = 24
+  const itemsPerPage = 12
 
   const baseApis = showFavoritesOnly
     ? apis.filter((api) => favorites.has(api.id))
@@ -65,64 +65,30 @@ export default function Home() {
   }, [searchQuery, selectedCategory, showFavoritesOnly])
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-4">
       {/* Hero Section */}
-      <section className="text-center space-y-4 py-6">
-        <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+      <section className="text-center space-y-2 py-3">
+        <h1 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
           한국의 모든 API를 한곳에
         </h1>
-        <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-          공공데이터부터 빅테크 API까지, {apis.length}개의 한국 오픈 API를 검색하고
-          바로 사용하세요
+        <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
+          {apis.length}개의 한국 오픈 API를 검색하고 바로 사용하세요
         </p>
       </section>
 
       {/* Search Bar */}
       <SearchBar value={searchQuery} onChange={setSearchQuery} />
 
-      {/* Stats */}
-      <div className="flex items-center justify-center gap-4 md:gap-8 text-xs md:text-sm text-muted-foreground">
-        <div className="flex items-center gap-2">
-          <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-          <span>총 {apis.length}개 API</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <Star className="h-3 w-3 md:h-4 md:w-4 fill-yellow-500 text-yellow-500" />
-          <span>{favorites.size}개 즐겨찾기</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="h-2 w-2 rounded-full bg-blue-500" />
-          <span>{sortedApis.length}개 표시</span>
-        </div>
-      </div>
-
-      {/* Filters & Controls */}
-      <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
-        <div className="flex flex-col sm:flex-row gap-3">
+      {/* Filters & Controls - Compact Single Line */}
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <CategoryFilter
             selectedCategory={selectedCategory}
             onSelectCategory={setSelectedCategory}
             apiCounts={apiCounts}
           />
-          <Button
-            variant={showFavoritesOnly ? "default" : "outline"}
-            size="sm"
-            onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
-            className="gap-2"
-          >
-            <Star
-              className={`h-4 w-4 ${
-                showFavoritesOnly ? "fill-current" : ""
-              }`}
-            />
-            즐겨찾기만 보기
-          </Button>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <ArrowUpDown className="h-4 w-4 text-muted-foreground" />
           <Select value={sortBy} onValueChange={(v: any) => setSortBy(v)}>
-            <SelectTrigger className="w-[140px]">
+            <SelectTrigger className="w-[120px]">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -131,8 +97,45 @@ export default function Home() {
               <SelectItem value="auth">인증순</SelectItem>
             </SelectContent>
           </Select>
+          <Button
+            variant={showFavoritesOnly ? "default" : "outline"}
+            size="sm"
+            onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
+            className="gap-1.5"
+          >
+            <Star className={`h-3.5 w-3.5 ${showFavoritesOnly ? "fill-current" : ""}`} />
+            <span className="hidden sm:inline">즐겨찾기</span>
+          </Button>
+        </div>
+        <div className="text-xs text-muted-foreground text-right">
+          {sortedApis.length}개 표시
         </div>
       </div>
+
+      {/* Pagination - Top */}
+      {isLoaded && totalPages > 1 && displayedApis.length > 0 && (
+        <div className="flex items-center justify-center gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+            disabled={currentPage === 1}
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </Button>
+          <span className="text-sm text-muted-foreground">
+            {currentPage} / {totalPages}
+          </span>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+            disabled={currentPage === totalPages}
+          >
+            <ChevronRight className="h-4 w-4" />
+          </Button>
+        </div>
+      )}
 
       {/* API Grid */}
       {isLoaded && (
@@ -164,9 +167,9 @@ export default function Home() {
                 onToggleFavorite={toggleFavorite}
               />
 
-              {/* Pagination */}
+              {/* Pagination - Bottom */}
               {totalPages > 1 && (
-                <div className="flex items-center justify-center gap-2 pt-4">
+                <div className="flex items-center justify-center gap-2">
                   <Button
                     variant="outline"
                     size="sm"
@@ -179,7 +182,6 @@ export default function Home() {
                   <div className="flex items-center gap-1">
                     {Array.from({ length: totalPages }, (_, i) => i + 1)
                       .filter(p => {
-                        // Show first, last, current, and neighbors
                         return p === 1 ||
                                p === totalPages ||
                                Math.abs(p - currentPage) <= 1

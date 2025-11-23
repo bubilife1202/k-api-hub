@@ -5,7 +5,7 @@ import { ApiItem } from "@/data/apis"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { Badge } from "./ui/badge"
 import { Button } from "./ui/button"
-import { ExternalLink, Copy, Star, Code2, Share2 } from "lucide-react"
+import { ExternalLink, Copy, Star, Code2 } from "lucide-react"
 import { CodeModal } from "./code-modal"
 
 interface ApiCardProps {
@@ -17,35 +17,11 @@ interface ApiCardProps {
 export function ApiCard({ api, isFavorite, onToggleFavorite }: ApiCardProps) {
   const [showCodeModal, setShowCodeModal] = useState(false)
   const [copied, setCopied] = useState(false)
-  const [shared, setShared] = useState(false)
 
   const copyUrl = async () => {
     await navigator.clipboard.writeText(api.url)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
-  }
-
-  const shareApi = async () => {
-    const shareData = {
-      title: `${api.name} - K-API HUB`,
-      text: api.description,
-      url: api.url,
-    }
-
-    if (navigator.share) {
-      try {
-        await navigator.share(shareData)
-        setShared(true)
-        setTimeout(() => setShared(false), 2000)
-      } catch (err) {
-        // User cancelled or error
-      }
-    } else {
-      // Fallback: copy to clipboard
-      await navigator.clipboard.writeText(`${api.name}\n${api.description}\n${api.url}`)
-      setShared(true)
-      setTimeout(() => setShared(false), 2000)
-    }
   }
 
   const getAuthColor = (auth: string) => {
@@ -116,14 +92,14 @@ export function ApiCard({ api, isFavorite, onToggleFavorite }: ApiCardProps) {
               <Badge variant="secondary">{api.provider}</Badge>
             </div>
           </CardContent>
-          <CardFooter className="pt-0 gap-2 flex-wrap">
+          <CardFooter className="pt-0 gap-2">
             <Button
               variant="outline"
               size="sm"
-              className="flex-1 min-w-[100px]"
+              className="flex-1"
               onClick={() => setShowCodeModal(true)}
             >
-              <Code2 className="h-4 w-4 mr-1" />
+              <Code2 className="h-4 w-4 mr-2" />
               사용법
             </Button>
             <Button
@@ -133,14 +109,6 @@ export function ApiCard({ api, isFavorite, onToggleFavorite }: ApiCardProps) {
               title="URL 복사"
             >
               {copied ? "✓" : <Copy className="h-4 w-4" />}
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={shareApi}
-              title="공유하기"
-            >
-              {shared ? "✓" : <Share2 className="h-4 w-4" />}
             </Button>
             <Button
               variant="outline"
