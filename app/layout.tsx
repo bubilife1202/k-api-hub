@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Github, Plus } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ClientHeader } from "@/components/client-header";
 
 export const metadata: Metadata = {
   title: {
@@ -123,51 +122,12 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen antialiased">
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container flex h-16 items-center justify-between">
-            <div className="flex items-center gap-2">
-              <a href="/" className="flex items-center space-x-2">
-                <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent">
-                  K-API HUB
-                </span>
-              </a>
-            </div>
-            <nav className="flex items-center gap-2">
-              <Button variant="ghost" size="sm" asChild>
-                <a
-                  href="https://github.com/yybmion/public-apis-4Kr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="default" size="sm" asChild>
-                <a
-                  href="https://github.com/yybmion/public-apis-4Kr/issues/new"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Plus className="h-4 w-4 mr-1" />
-                  API 제보하기
-                </a>
-              </Button>
-            </nav>
-          </div>
-        </header>
+        <ClientHeader />
         <main className="container py-8">{children}</main>
         <footer className="border-t py-6 md:py-0">
           <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
             <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-              Built with ❤️ for Korean developers. Data from{" "}
-              <a
-                href="https://github.com/yybmion/public-apis-4Kr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium underline underline-offset-4"
-              >
-                public-apis-4Kr
-              </a>
+              Built with ❤️ for Korean developers.
             </p>
           </div>
         </footer>

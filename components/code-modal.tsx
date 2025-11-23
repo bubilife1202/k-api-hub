@@ -31,6 +31,23 @@ export function CodeModal({ open, onOpenChange, api }: CodeModalProps) {
       return `curl -X GET "${api.url}" \\
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\
   -H "Content-Type: application/json"`
+    } else if (api.auth === 'JWT') {
+      return `curl -X GET "${api.url}" \\
+  -H "Authorization: Bearer YOUR_JWT_TOKEN" \\
+  -H "Content-Type: application/json"`
+    } else if (api.auth === 'Bearer Token') {
+      return `curl -X GET "${api.url}" \\
+  -H "Authorization: Bearer YOUR_TOKEN" \\
+  -H "Content-Type: application/json"`
+    } else if (api.auth === 'Partnership') {
+      return `curl -X GET "${api.url}" \\
+  -H "X-API-Key: YOUR_PARTNERSHIP_KEY" \\
+  -H "Content-Type: application/json"`
+    } else if (api.auth === 'webhook') {
+      return `# Webhook 수신 예제
+curl -X POST "${api.url}" \\
+  -H "Content-Type: application/json" \\
+  -d '{"event": "example", "data": {}}'`
     } else {
       return `curl -X GET "${api.url}" \\
   -H "Content-Type: application/json"`
@@ -66,6 +83,62 @@ fetch('${api.url}', {
   .then(response => response.json())
   .then(data => console.log(data))
   .catch(error => console.error('Error:', error));`
+    } else if (api.auth === 'JWT') {
+      return `// JWT 토큰을 사용한 호출 예제
+const jwtToken = 'YOUR_JWT_TOKEN';
+
+fetch('${api.url}', {
+  method: 'GET',
+  headers: {
+    'Authorization': \`Bearer \${jwtToken}\`,
+    'Content-Type': 'application/json'
+  }
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));`
+    } else if (api.auth === 'Bearer Token') {
+      return `// Bearer Token을 사용한 호출 예제
+const bearerToken = 'YOUR_TOKEN';
+
+fetch('${api.url}', {
+  method: 'GET',
+  headers: {
+    'Authorization': \`Bearer \${bearerToken}\`,
+    'Content-Type': 'application/json'
+  }
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));`
+    } else if (api.auth === 'Partnership') {
+      return `// Partnership API Key를 사용한 호출 예제
+const partnershipKey = 'YOUR_PARTNERSHIP_KEY';
+
+fetch('${api.url}', {
+  method: 'GET',
+  headers: {
+    'X-API-Key': partnershipKey,
+    'Content-Type': 'application/json'
+  }
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));`
+    } else if (api.auth === 'webhook') {
+      return `// Webhook 수신 서버 예제 (Express.js)
+const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+app.post('${api.url}', (req, res) => {
+  const { event, data } = req.body;
+  console.log('Webhook received:', event, data);
+  res.status(200).json({ success: true });
+});
+
+app.listen(3000, () => console.log('Webhook server running'));`
     } else {
       return `// 인증이 필요 없는 공개 API 호출
 fetch('${api.url}')
@@ -102,6 +175,59 @@ headers = {
 response = requests.get('${api.url}', headers=headers)
 data = response.json()
 print(data)`
+    } else if (api.auth === 'JWT') {
+      return `import requests
+
+# JWT 토큰을 사용한 호출 예제
+jwt_token = 'YOUR_JWT_TOKEN'
+headers = {
+    'Authorization': f'Bearer {jwt_token}',
+    'Content-Type': 'application/json'
+}
+
+response = requests.get('${api.url}', headers=headers)
+data = response.json()
+print(data)`
+    } else if (api.auth === 'Bearer Token') {
+      return `import requests
+
+# Bearer Token을 사용한 호출 예제
+bearer_token = 'YOUR_TOKEN'
+headers = {
+    'Authorization': f'Bearer {bearer_token}',
+    'Content-Type': 'application/json'
+}
+
+response = requests.get('${api.url}', headers=headers)
+data = response.json()
+print(data)`
+    } else if (api.auth === 'Partnership') {
+      return `import requests
+
+# Partnership API Key를 사용한 호출 예제
+partnership_key = 'YOUR_PARTNERSHIP_KEY'
+headers = {
+    'X-API-Key': partnership_key,
+    'Content-Type': 'application/json'
+}
+
+response = requests.get('${api.url}', headers=headers)
+data = response.json()
+print(data)`
+    } else if (api.auth === 'webhook') {
+      return `from flask import Flask, request, jsonify
+
+# Webhook 수신 서버 예제 (Flask)
+app = Flask(__name__)
+
+@app.route('${api.url}', methods=['POST'])
+def webhook():
+    data = request.json
+    print('Webhook received:', data)
+    return jsonify({'success': True}), 200
+
+if __name__ == '__main__':
+    app.run(port=3000)`
     } else {
       return `import requests
 

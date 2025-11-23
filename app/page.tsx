@@ -6,9 +6,16 @@ import { ApiGrid } from "@/components/api-grid"
 import { useApiSearch } from "@/hooks/use-api-search"
 import { useFavorites } from "@/hooks/use-favorites"
 import { Button } from "@/components/ui/button"
-import { Star } from "lucide-react"
-import { useState } from "react"
+import { Star, ChevronLeft, ChevronRight, ArrowUpDown } from "lucide-react"
+import { useState, useMemo } from "react"
 import { apis } from "@/data/apis"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 export default function Home() {
   const {
@@ -22,20 +29,50 @@ export default function Home() {
 
   const { favorites, toggleFavorite, isLoaded } = useFavorites()
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false)
+  const [sortBy, setSortBy] = useState<'name' | 'provider' | 'auth'>('name')
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 24
 
-  const displayedApis = showFavoritesOnly
+  const baseApis = showFavoritesOnly
     ? apis.filter((api) => favorites.has(api.id))
     : filteredApis
+
+  // Sort APIs
+  const sortedApis = useMemo(() => {
+    const sorted = [...baseApis]
+    switch (sortBy) {
+      case 'name':
+        return sorted.sort((a, b) => a.name.localeCompare(b.name, 'ko'))
+      case 'provider':
+        return sorted.sort((a, b) => a.provider.localeCompare(b.provider, 'ko'))
+      case 'auth':
+        return sorted.sort((a, b) => a.auth.localeCompare(b.auth))
+      default:
+        return sorted
+    }
+  }, [baseApis, sortBy])
+
+  // Pagination
+  const totalPages = Math.ceil(sortedApis.length / itemsPerPage)
+  const displayedApis = sortedApis.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  )
+
+  // Reset to page 1 when filters change
+  useMemo(() => {
+    setCurrentPage(1)
+  }, [searchQuery, selectedCategory, showFavoritesOnly])
 
   return (
     <div className="space-y-8">
       {/* Hero Section */}
-      <section className="text-center space-y-4 py-8">
-        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+      <section className="text-center space-y-4 py-6">
+        <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
           한국의 모든 API를 한곳에
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-          공공데이터부터 빅테크 API까지, 58개 이상의 한국 오픈 API를 검색하고
+        <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+          공공데이터부터 빅테크 API까지, {apis.length}개의 한국 오픈 API를 검색하고
           바로 사용하세요
         </p>
       </section>
@@ -44,59 +81,139 @@ export default function Home() {
       <SearchBar value={searchQuery} onChange={setSearchQuery} />
 
       {/* Stats */}
-      <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground">
+      <div className="flex items-center justify-center gap-4 md:gap-8 text-xs md:text-sm text-muted-foreground">
         <div className="flex items-center gap-2">
           <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
           <span>총 {apis.length}개 API</span>
         </div>
         <div className="flex items-center gap-2">
-          <Star className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+          <Star className="h-3 w-3 md:h-4 md:w-4 fill-yellow-500 text-yellow-500" />
           <span>{favorites.size}개 즐겨찾기</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="h-2 w-2 rounded-full bg-blue-500" />
+          <span>{sortedApis.length}개 표시</span>
         </div>
       </div>
 
-      {/* Category Filter & Favorites Toggle */}
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <CategoryFilter
-          selectedCategory={selectedCategory}
-          onSelectCategory={setSelectedCategory}
-          apiCounts={apiCounts}
-        />
-        <Button
-          variant={showFavoritesOnly ? "default" : "outline"}
-          size="sm"
-          onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
-          className="gap-2"
-        >
-          <Star
-            className={`h-4 w-4 ${
-              showFavoritesOnly ? "fill-current" : ""
-            }`}
+      {/* Filters & Controls */}
+      <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+        <div className="flex flex-col sm:flex-row gap-3">
+          <CategoryFilter
+            selectedCategory={selectedCategory}
+            onSelectCategory={setSelectedCategory}
+            apiCounts={apiCounts}
           />
-          즐겨찾기만 보기
-        </Button>
-      </div>
+          <Button
+            variant={showFavoritesOnly ? "default" : "outline"}
+            size="sm"
+            onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
+            className="gap-2"
+          >
+            <Star
+              className={`h-4 w-4 ${
+                showFavoritesOnly ? "fill-current" : ""
+              }`}
+            />
+            즐겨찾기만 보기
+          </Button>
+        </div>
 
-      {/* Results Count */}
-      <div className="text-sm text-muted-foreground">
-        {showFavoritesOnly ? (
-          <p>즐겨찾기: {displayedApis.length}개</p>
-        ) : (
-          <p>
-            {searchQuery || selectedCategory !== "전체"
-              ? `검색 결과: ${displayedApis.length}개`
-              : `전체: ${displayedApis.length}개`}
-          </p>
-        )}
+        <div className="flex items-center gap-2">
+          <ArrowUpDown className="h-4 w-4 text-muted-foreground" />
+          <Select value={sortBy} onValueChange={(v: any) => setSortBy(v)}>
+            <SelectTrigger className="w-[140px]">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="name">이름순</SelectItem>
+              <SelectItem value="provider">제공자순</SelectItem>
+              <SelectItem value="auth">인증순</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
       </div>
 
       {/* API Grid */}
       {isLoaded && (
-        <ApiGrid
-          apis={displayedApis}
-          favorites={favorites}
-          onToggleFavorite={toggleFavorite}
-        />
+        <>
+          {displayedApis.length === 0 ? (
+            <div className="text-center py-16">
+              {showFavoritesOnly ? (
+                <>
+                  <Star className="h-16 w-16 mx-auto mb-4 text-muted-foreground/40" />
+                  <p className="text-xl font-semibold mb-2">즐겨찾기한 API가 없습니다</p>
+                  <p className="text-muted-foreground">
+                    마음에 드는 API를 ⭐️ 버튼으로 즐겨찾기에 추가해보세요
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="text-xl font-semibold mb-2">검색 결과가 없습니다</p>
+                  <p className="text-muted-foreground">
+                    다른 키워드나 카테고리로 검색해보세요
+                  </p>
+                </>
+              )}
+            </div>
+          ) : (
+            <>
+              <ApiGrid
+                apis={displayedApis}
+                favorites={favorites}
+                onToggleFavorite={toggleFavorite}
+              />
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <div className="flex items-center justify-center gap-2 pt-4">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                    disabled={currentPage === 1}
+                  >
+                    <ChevronLeft className="h-4 w-4" />
+                  </Button>
+
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: totalPages }, (_, i) => i + 1)
+                      .filter(p => {
+                        // Show first, last, current, and neighbors
+                        return p === 1 ||
+                               p === totalPages ||
+                               Math.abs(p - currentPage) <= 1
+                      })
+                      .map((page, idx, arr) => (
+                        <div key={page} className="flex items-center gap-1">
+                          {idx > 0 && arr[idx - 1] !== page - 1 && (
+                            <span className="px-2 text-muted-foreground">...</span>
+                          )}
+                          <Button
+                            variant={currentPage === page ? "default" : "outline"}
+                            size="sm"
+                            onClick={() => setCurrentPage(page)}
+                            className="min-w-[2.5rem]"
+                          >
+                            {page}
+                          </Button>
+                        </div>
+                      ))}
+                  </div>
+
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                    disabled={currentPage === totalPages}
+                  >
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              )}
+            </>
+          )}
+        </>
       )}
     </div>
   )

@@ -1,8 +1,14 @@
 "use client"
 
 import { categories } from "@/data/apis"
-import { Button } from "./ui/button"
-import { Badge } from "./ui/badge"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select"
+import { Filter } from "lucide-react"
 
 interface CategoryFilterProps {
   selectedCategory: string
@@ -16,28 +22,20 @@ export function CategoryFilter({
   apiCounts,
 }: CategoryFilterProps) {
   return (
-    <div className="flex flex-wrap gap-2">
-      {categories.map((category) => (
-        <Button
-          key={category}
-          variant={selectedCategory === category ? "default" : "outline"}
-          size="sm"
-          onClick={() => onSelectCategory(category)}
-          className="gap-2"
-        >
-          {category}
-          <Badge
-            variant="secondary"
-            className={`${
-              selectedCategory === category
-                ? "bg-primary-foreground/20 text-primary-foreground"
-                : ""
-            }`}
-          >
-            {apiCounts[category] || 0}
-          </Badge>
-        </Button>
-      ))}
+    <div className="flex items-center gap-2">
+      <Filter className="h-4 w-4 text-muted-foreground" />
+      <Select value={selectedCategory} onValueChange={onSelectCategory}>
+        <SelectTrigger className="w-[200px] md:w-[280px]">
+          <SelectValue placeholder="카테고리 선택" />
+        </SelectTrigger>
+        <SelectContent>
+          {categories.map((category) => (
+            <SelectItem key={category} value={category}>
+              {category} ({apiCounts[category] || 0})
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
     </div>
   )
 }

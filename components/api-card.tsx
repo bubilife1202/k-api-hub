@@ -5,7 +5,7 @@ import { ApiItem } from "@/data/apis"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { Badge } from "./ui/badge"
 import { Button } from "./ui/button"
-import { ExternalLink, Copy, Star, Code2 } from "lucide-react"
+import { ExternalLink, Copy, Star, Code2, Share2 } from "lucide-react"
 import { CodeModal } from "./code-modal"
 
 interface ApiCardProps {
@@ -17,11 +17,35 @@ interface ApiCardProps {
 export function ApiCard({ api, isFavorite, onToggleFavorite }: ApiCardProps) {
   const [showCodeModal, setShowCodeModal] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [shared, setShared] = useState(false)
 
   const copyUrl = async () => {
     await navigator.clipboard.writeText(api.url)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
+  }
+
+  const shareApi = async () => {
+    const shareData = {
+      title: `${api.name} - K-API HUB`,
+      text: api.description,
+      url: api.url,
+    }
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData)
+        setShared(true)
+        setTimeout(() => setShared(false), 2000)
+      } catch (err) {
+        // User cancelled or error
+      }
+    } else {
+      // Fallback: copy to clipboard
+      await navigator.clipboard.writeText(`${api.name}\n${api.description}\n${api.url}`)
+      setShared(true)
+      setTimeout(() => setShared(false), 2000)
+    }
   }
 
   const getAuthColor = (auth: string) => {
@@ -32,6 +56,16 @@ export function ApiCard({ api, isFavorite, onToggleFavorite }: ApiCardProps) {
         return 'bg-blue-500/10 text-blue-500 border-blue-500/20'
       case 'Open':
         return 'bg-green-500/10 text-green-500 border-green-500/20'
+      case 'JWT':
+        return 'bg-cyan-500/10 text-cyan-500 border-cyan-500/20'
+      case 'Partnership':
+        return 'bg-orange-500/10 text-orange-500 border-orange-500/20'
+      case 'Bearer Token':
+        return 'bg-indigo-500/10 text-indigo-500 border-indigo-500/20'
+      case 'webhook':
+        return 'bg-pink-500/10 text-pink-500 border-pink-500/20'
+      case 'None':
+        return 'bg-gray-500/10 text-gray-500 border-gray-500/20'
       default:
         return 'bg-gray-500/10 text-gray-500 border-gray-500/20'
     }
@@ -82,11 +116,11 @@ export function ApiCard({ api, isFavorite, onToggleFavorite }: ApiCardProps) {
               <Badge variant="secondary">{api.provider}</Badge>
             </div>
           </CardContent>
-          <CardFooter className="pt-0 gap-2">
+          <CardFooter className="pt-0 gap-2 flex-wrap">
             <Button
               variant="outline"
               size="sm"
-              className="flex-1"
+              className="flex-1 min-w-[100px]"
               onClick={() => setShowCodeModal(true)}
             >
               <Code2 className="h-4 w-4 mr-1" />
@@ -96,13 +130,23 @@ export function ApiCard({ api, isFavorite, onToggleFavorite }: ApiCardProps) {
               variant="outline"
               size="sm"
               onClick={copyUrl}
+              title="URL 복사"
             >
-              {copied ? "복사됨!" : <Copy className="h-4 w-4" />}
+              {copied ? "✓" : <Copy className="h-4 w-4" />}
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={shareApi}
+              title="공유하기"
+            >
+              {shared ? "✓" : <Share2 className="h-4 w-4" />}
             </Button>
             <Button
               variant="outline"
               size="sm"
               asChild
+              title="문서 열기"
             >
               <a href={api.url} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-4 w-4" />
