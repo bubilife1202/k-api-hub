@@ -4,14 +4,28 @@
 
 @layer base {
   :root {
+    /* Base Colors */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+
+    /* Brand Colors */
+    --brand-primary: 221 83% 53%;
+    --brand-secondary: 262 83% 58%;
+    --brand-accent: 280 79% 58%;
+    --brand-gradient-start: 221 83% 53%;
+    --brand-gradient-mid: 262 83% 58%;
+    --brand-gradient-end: 280 79% 58%;
+
+    /* Surface Colors */
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
+    --card-hover: 0 0% 98%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
+
+    /* Semantic Colors */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
@@ -20,20 +34,70 @@
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
+
+    /* Border & Input */
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-    --radius: 0.5rem;
+    --ring: 221 83% 53%;
+    --radius: 0.75rem;
+
+    /* Auth Badge Colors */
+    --auth-apikey: 221 83% 53%;
+    --auth-apikey-bg: 221 83% 97%;
+    --auth-oauth: 262 83% 58%;
+    --auth-oauth-bg: 262 83% 97%;
+    --auth-jwt: 184 65% 44%;
+    --auth-jwt-bg: 184 65% 96%;
+    --auth-bearer: 237 77% 60%;
+    --auth-bearer-bg: 237 77% 97%;
+    --auth-partnership: 25 95% 53%;
+    --auth-partnership-bg: 25 95% 97%;
+    --auth-webhook: 330 81% 60%;
+    --auth-webhook-bg: 330 81% 97%;
+    --auth-open: 142 71% 45%;
+    --auth-open-bg: 142 71% 96%;
+    --auth-none: 215 14% 34%;
+    --auth-none-bg: 215 14% 95%;
+
+    /* Status Colors */
+    --status-active: 142 71% 45%;
+    --status-active-bg: 142 71% 96%;
+    --status-beta: 25 95% 53%;
+    --status-beta-bg: 25 95% 97%;
+    --status-new: 262 83% 58%;
+    --status-new-bg: 262 83% 97%;
+
+    /* CORS Colors */
+    --cors-yes: 142 71% 45%;
+    --cors-yes-bg: 142 71% 96%;
+    --cors-no: 0 84% 60%;
+    --cors-no-bg: 0 84% 97%;
+    --cors-unknown: 45 93% 47%;
+    --cors-unknown-bg: 45 93% 96%;
   }
 
   .dark {
+    /* Base Colors */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
+
+    /* Brand Colors (slightly lighter for dark mode) */
+    --brand-primary: 217 91% 60%;
+    --brand-secondary: 262 83% 65%;
+    --brand-accent: 280 79% 65%;
+    --brand-gradient-start: 217 91% 60%;
+    --brand-gradient-mid: 262 83% 65%;
+    --brand-gradient-end: 280 79% 65%;
+
+    /* Surface Colors */
+    --card: 217.2 32.6% 12%;
     --card-foreground: 210 40% 98%;
+    --card-hover: 217.2 32.6% 15%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
+
+    /* Semantic Colors */
+    --primary: 217 91% 60%;
     --primary-foreground: 222.2 47.4% 11.2%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -43,9 +107,45 @@
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
+
+    /* Border & Input */
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --ring: 217 91% 60%;
+
+    /* Auth Badge Colors (darker backgrounds for dark mode) */
+    --auth-apikey: 221 83% 65%;
+    --auth-apikey-bg: 221 83% 15%;
+    --auth-oauth: 262 83% 68%;
+    --auth-oauth-bg: 262 83% 15%;
+    --auth-jwt: 184 65% 55%;
+    --auth-jwt-bg: 184 65% 15%;
+    --auth-bearer: 237 77% 70%;
+    --auth-bearer-bg: 237 77% 15%;
+    --auth-partnership: 25 95% 65%;
+    --auth-partnership-bg: 25 95% 15%;
+    --auth-webhook: 330 81% 70%;
+    --auth-webhook-bg: 330 81% 15%;
+    --auth-open: 142 71% 55%;
+    --auth-open-bg: 142 71% 15%;
+    --auth-none: 215 14% 60%;
+    --auth-none-bg: 215 14% 15%;
+
+    /* Status Colors */
+    --status-active: 142 71% 55%;
+    --status-active-bg: 142 71% 15%;
+    --status-beta: 25 95% 65%;
+    --status-beta-bg: 25 95% 15%;
+    --status-new: 262 83% 68%;
+    --status-new-bg: 262 83% 15%;
+
+    /* CORS Colors */
+    --cors-yes: 142 71% 55%;
+    --cors-yes-bg: 142 71% 15%;
+    --cors-no: 0 84% 70%;
+    --cors-no-bg: 0 84% 15%;
+    --cors-unknown: 45 93% 60%;
+    --cors-unknown-bg: 45 93% 15%;
   }
 }
 
