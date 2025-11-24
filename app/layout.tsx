@@ -41,21 +41,12 @@ export const metadata: Metadata = {
     description:
       "한국의 유용한 Open API, 공공데이터, 개발자 도구를 한곳에 모았습니다.",
     siteName: "K-API HUB",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "K-API HUB",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "K-API HUB | 한국 오픈 API 모음",
     description:
       "한국의 유용한 Open API, 공공데이터, 개발자 도구를 한곳에 모았습니다.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
