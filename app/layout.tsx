@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     template: "%s | K-API HUB",
   },
   description:
-    "한국의 유용한 Open API, 공공데이터, 개발자 도구를 한곳에 모았습니다. 무료 API 키, 문서 링크, 사용 예제를 제공합니다.",
+    "220개 이상의 한국 오픈 API, 공공데이터, 개발자 도구를 한곳에 모았습니다. 지도, 금융, 교통, AI 등 다양한 카테고리의 API를 쉽게 검색하고 활용하세요.",
   keywords: [
     "API",
     "오픈API",
@@ -39,14 +39,14 @@ export const metadata: Metadata = {
     url: "https://k-api-hub.vercel.app",
     title: "K-API HUB | 한국 오픈 API 모음",
     description:
-      "한국의 유용한 Open API, 공공데이터, 개발자 도구를 한곳에 모았습니다.",
+      "220+ 한국 오픈 API, 공공데이터, 개발자 도구 통합 검색. 지금 바로 필요한 API를 찾아보세요.",
     siteName: "K-API HUB",
   },
   twitter: {
     card: "summary_large_image",
     title: "K-API HUB | 한국 오픈 API 모음",
     description:
-      "한국의 유용한 Open API, 공공데이터, 개발자 도구를 한곳에 모았습니다.",
+      "220+ 한국 오픈 API, 공공데이터, 개발자 도구 통합 검색. 지금 바로 필요한 API를 찾아보세요.",
   },
   robots: {
     index: true,
