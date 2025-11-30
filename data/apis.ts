@@ -67,13 +67,13 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "myhealthway-go-kr-portal-index",
+    "id": "mohw-go-kr-menu-es",
     "category": "정부/공공기관",
-    "name": "마이헬스웨이 API",
-    "description": "보건복지부 개인 의료정보 통합 플랫폼, 113종 건강정보 제공",
+    "name": "보건복지부",
+    "description": "보건복지부의 정책, 법령, 재정, 감사, 연구정보 등 제공",
     "auth": "OAuth",
     "cors": "Unknown",
-    "url": "https://www.myhealthway.go.kr/portal/index?page=Individual/Portal/MediMyData/MydataApi",
+    "url": "https://www.mohw.go.kr/menu.es?mid=a10104010100",
     "provider": "Gov"
   },
   {
@@ -227,13 +227,13 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "data-mafra-go-kr-apply-indexapiprcusereqst-do",
+    "id": "data-mafra-go-kr-main-do",
     "category": "정부/공공기관",
-    "name": "농림축산식품부 AgriX",
-    "description": "농업경영체, 스마트팜, 축산물이력제 정보",
+    "name": "농림축산식품부",
+    "description": "농촌, 농업, 축산, 유통소비 등 데이터 제공",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://data.mafra.go.kr/apply/indexApiPrcuseReqst.do",
+    "url": "https://data.mafra.go.kr/main.do",
     "provider": "Gov"
   },
   {
@@ -280,7 +280,7 @@ export const apis: ApiItem[] = [
     "id": "index-go-kr-unity-openapi-openapiintro-do",
     "category": "정부/공공기관",
     "name": "국가지표통합 공유서비스",
-    "description": "통계정보 웹/모바일앱 개발 인터페이스 제공",
+    "description": "국가 통계포털 ‘지표누리’가 각종 공공 통계지표 제공",
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://www.index.go.kr/unity/openApi/openApiIntro.do",
@@ -300,10 +300,20 @@ export const apis: ApiItem[] = [
     "id": "policy-nl-go-kr-pages-point-api-jsp",
     "category": "정부/공공기관",
     "name": "정책정보포털 POINT",
-    "description": "정책정보 검색목록과 상세조회 API",
+    "description": "최신정책동향, 온라인 정부간행물, 정책정보종합목록 제공",
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://policy.nl.go.kr/pages/point/api.jsp",
+    "provider": "Gov"
+  },
+  {
+    "id": "bigdata-sbiz-or-kr",
+    "category": "정부/공공기관",
+    "name": "소상공인 365 API",
+    "description": "전국 상가업소 조회",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://bigdata.sbiz.or.kr/#/apiMain/dataApi/intro",
     "provider": "Gov"
   },
   {
@@ -370,7 +380,7 @@ export const apis: ApiItem[] = [
     "id": "openapi-kftc-or-kr-service-openbanking",
     "category": "금융/결제",
     "name": "금융결제원 오픈뱅킹",
-    "description": "19개 은행 통합 계좌조회, 이체, 결제 서비스",
+    "description": "19개+ 은행 통합 계좌조회, 이체, 결제 서비스",
     "auth": "OAuth",
     "cors": "Unknown",
     "url": "https://openapi.kftc.or.kr/service/openBanking",
@@ -390,7 +400,7 @@ export const apis: ApiItem[] = [
     "id": "apiportal-kbfg-com",
     "category": "금융/결제",
     "name": "KB API 포탈",
-    "description": "KB금융그룹 종합 금융 API 서비스 (755개 API 제공)",
+    "description": "KB금융그룹 종합 금융 API 서비스 (800+ API 제공)",
     "auth": "OAuth",
     "cors": "Unknown",
     "url": "https://apiportal.kbfg.com/",
@@ -420,7 +430,7 @@ export const apis: ApiItem[] = [
     "id": "hanafnapimarket-com",
     "category": "금융/결제",
     "name": "하나금융그룹 Open API",
-    "description": "그룹 통합 API 마켓플레이스",
+    "description": "하나금융그룹 API 마켓플레이스",
     "auth": "OAuth",
     "cors": "Unknown",
     "url": "https://www.hanafnapimarket.com/",
@@ -440,7 +450,7 @@ export const apis: ApiItem[] = [
     "id": "apiportal-koreainvestment-com-intro",
     "category": "금융/결제",
     "name": "한국투자증권 KIS API",
-    "description": "국내외 주식 시세 및 주문 API (2022년 출시)",
+    "description": "국내외 주식 시세 및 주문 API",
     "auth": "OAuth",
     "cors": "Unknown",
     "url": "https://apiportal.koreainvestment.com/intro",
@@ -527,46 +537,6 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "docs-upbit-com-kr",
-    "category": "금융/결제",
-    "name": "업비트 Open API",
-    "description": "국내 최대 암호화폐 거래소 API (JWT 인증)",
-    "auth": "JWT",
-    "cors": "Unknown",
-    "url": "https://docs.upbit.com/kr",
-    "provider": "Unknown"
-  },
-  {
-    "id": "apidocs-bithumb-com",
-    "category": "금융/결제",
-    "name": "빗썸 Open API",
-    "description": "암호화폐 거래, 원화 입출금 지원 (API 2.0)",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://apidocs.bithumb.com/",
-    "provider": "Unknown"
-  },
-  {
-    "id": "docs-coinone-co-kr",
-    "category": "금융/결제",
-    "name": "코인원 Open API",
-    "description": "가상자산 거래 및 시세정보 API",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://docs.coinone.co.kr/",
-    "provider": "Unknown"
-  },
-  {
-    "id": "openapi-kiwoom-com",
-    "category": "금융/결제",
-    "name": "키움증권 Open API+",
-    "description": "OCX 기반 실시간 주식 데이터 및 주문",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://openapi.kiwoom.com/",
-    "provider": "Unknown"
-  },
-  {
     "id": "developer-codef-io",
     "category": "금융/결제",
     "name": "CODEF API",
@@ -590,7 +560,7 @@ export const apis: ApiItem[] = [
     "id": "developer-payple-kr",
     "category": "금융/결제",
     "name": "페이플 API",
-    "description": "금융규제샌드박스 SMS 인증방식 간편결제, 정기결제",
+    "description": "간편결제, 정기결제, 링크결제 서비스",
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://developer.payple.kr/",
@@ -614,16 +584,6 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://apilink.kt.co.kr/",
-    "provider": "KT"
-  },
-  {
-    "id": "github-com-gigagenie-cloud-aiapi",
-    "category": "통신사",
-    "name": "KT Cloud AI API",
-    "description": "음성인식(Dictation), TTS(Voice), 개인화 TTS",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://github.com/gigagenie/cloud-aiapi",
     "provider": "KT"
   },
   {
@@ -754,6 +714,16 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://data.seoul.go.kr/dataList/OA-15493/A/1/datasetView.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "apihub-kma-go-kr",
+    "category": "날씨/환경",
+    "name": "기상청 API허브",
+    "description": "관측·예보·위성·레이더 등 12개 분야 기상데이터",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://apihub.kma.go.kr/",
     "provider": "Gov"
   },
   {
@@ -977,23 +947,13 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "data-go-kr-data-15001672-openapi-do",
+    "id": "nhis-or-kr-nhis-together-wbhaec10800m01-do",
     "category": "의료/건강",
-    "name": "국민건강보험공단 검진기관정보",
-    "description": "건강검진 및 암검진 기관정보",
+    "name": "국민건강보험공단",
+    "description": "장기요양 시설 정보와 건강검진 기관 정보, 예약 및 검진 일정 정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15001672/openapi.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "dportal-kdca-go-kr-pot-www-common-atrpt-intrcn-jsp",
-    "category": "의료/건강",
-    "name": "질병관리청 감염병정보",
-    "description": "법정감염병 발생현황 및 통계",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://dportal.kdca.go.kr/pot/www/COMMON/ATRPT/INTRCN.jsp",
+    "url": "https://www.nhis.or.kr/nhis/together/wbhaec10800m01.do",
     "provider": "Gov"
   },
   {
@@ -1167,16 +1127,6 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "data-go-kr-data-15056860-openapi-do",
-    "category": "통계/데이터",
-    "name": "통계청 KOSIS 통계목록",
-    "description": "국가통계포털 통계목록 조회",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15056860/openapi.do",
-    "provider": "Gov"
-  },
-  {
     "id": "kosis-kr-openapi",
     "category": "통계/데이터",
     "name": "통계청 KOSIS 통계자료",
@@ -1270,21 +1220,11 @@ export const apis: ApiItem[] = [
     "id": "epretx-etri-re-kr",
     "category": "인공지능",
     "name": "ETRI AI Open API",
-    "description": "한국전자통신연구원 AI 서비스 플랫폼",
+    "description": "ETRI에서 개발된 최첨단 인공지능 기술 제공",
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://epretx.etri.re.kr/",
     "provider": "Unknown"
-  },
-  {
-    "id": "kakaocorp-com-page-detail-11566",
-    "category": "인공지능",
-    "name": "카카오 카나나 AI API",
-    "description": "카카오 자체 개발 한국어 특화 생성형 AI 모델 4종 (오픈소스)",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.kakaocorp.com/page/detail/11566",
-    "provider": "Kakao"
   },
   {
     "id": "aihub-or-kr",
@@ -1667,6 +1607,16 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "sendbird-com-docs",
+    "category": "소셜/커뮤니케이션",
+    "name": "센드버드 채팅 플랫폼 API",
+    "description": "실시간 채팅, 음성/영상 통화, AI 챗봇 기능",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://sendbird.com/docs",
+    "provider": "Unknown"
+  },
+  {
     "id": "support-jandi-com",
     "category": "소셜/커뮤니케이션",
     "name": "잔디(JANDI) 웹훅",
@@ -1840,7 +1790,7 @@ export const apis: ApiItem[] = [
     "id": "developer-smartthings-com-docs-api-public",
     "category": "IoT/스마트홈",
     "name": "삼성 SmartThings API",
-    "description": "글로벌 IoT 생태계 플랫폼",
+    "description": "스마트홈 기기 제어, 자동화(룰), 장소 관리, 사용자·기기 정보 조회",
     "auth": "OAuth",
     "cors": "Unknown",
     "url": "https://developer.smartthings.com/docs/api/public",
@@ -1850,30 +1800,40 @@ export const apis: ApiItem[] = [
     "id": "smartsolution-developer-lge-com-ko-apimanage-thinq-connect",
     "category": "IoT/스마트홈",
     "name": "LG ThinQ API",
-    "description": "26종 AI 가전 제어 및 상업용 설비 관리",
+    "description": "AI 가전 제어 및 상업용 설비 관리",
     "auth": "OAuth",
     "cors": "Unknown",
     "url": "https://smartsolution.developer.lge.com/ko/apiManage/thinq_connect?s=1755605653897",
     "provider": "LG"
   },
   {
-    "id": "sendbird-com-docs",
-    "category": "메시징",
-    "name": "센드버드 채팅 플랫폼 API",
-    "description": "실시간 채팅, 음성/영상 통화, AI 챗봇 기능",
+    "id": "apidocs-bithumb-com",
+    "category": "암호화폐",
+    "name": "빗썸 프로 API",
+    "description": "전문 거래자용 암호화폐 거래 API",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://sendbird.com/docs",
+    "url": "https://apidocs.bithumb.com/",
     "provider": "Unknown"
   },
   {
-    "id": "sendbird-com-docs-calls",
-    "category": "메시징",
-    "name": "센드버드 통화 API",
-    "description": "WebRTC 기반 음성/영상 통화 솔루션",
+    "id": "docs-upbit-com-kr",
+    "category": "암호화폐",
+    "name": "업비트 Open API",
+    "description": "국내 최대 암호화폐 거래소 API (JWT 인증)",
+    "auth": "JWT",
+    "cors": "Unknown",
+    "url": "https://docs.upbit.com/kr",
+    "provider": "Unknown"
+  },
+  {
+    "id": "docs-coinone-co-kr",
+    "category": "암호화폐",
+    "name": "코인원 Open API",
+    "description": "가상자산 거래 및 시세정보 API",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://sendbird.com/docs/calls",
+    "url": "https://docs.coinone.co.kr/",
     "provider": "Unknown"
   },
   {
