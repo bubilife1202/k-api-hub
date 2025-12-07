@@ -1127,6 +1127,16 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "emuseum-go-kr-openapi",
+    "category": "문화/관광",
+    "name": "국립중앙박물관 e뮤지엄",
+    "description": "전국 박물관 소장품(유물) 정보 조회",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.emuseum.go.kr/openApi",
+    "provider": "Gov"
+  },
+  {
     "id": "kosis-kr-openapi",
     "category": "통계/데이터",
     "name": "통계청 KOSIS 통계자료",
