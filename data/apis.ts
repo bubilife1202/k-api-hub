@@ -17,13 +17,13 @@ export interface ApiItem {
 
 export const apis: ApiItem[] = [
   {
-    "id": "data-go-kr",
+    "id": "opendata-hira-or-kr-op-opc-selectopenapiinfoview-do",
     "category": "정부/공공기관",
-    "name": "공공데이터포털",
-    "description": "정부 및 공공기관의 모든 데이터를 통합 제공하는 중앙 플랫폼 (10만개 이상 데이터셋)",
+    "name": "건강보험심사평가원 병원정보",
+    "description": "전국 의료기관 기본정보 및 진료과목 정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.data.go.kr/",
+    "url": "https://opendata.hira.or.kr/op/opc/selectOpenApiInfoView.do",
     "provider": "Gov"
   },
   {
@@ -37,233 +37,13 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "data-busan-go-kr-bdip-opendata-dataset-do",
+    "id": "data-go-kr",
     "category": "정부/공공기관",
-    "name": "부산광역시 빅데이터",
-    "description": "부산시 및 16개 구·군·공공기관의 공공데이터(교육, 공공행정, 문화, 식품, 안전, 교통 등) 통합 제공 포털",
+    "name": "공공데이터포털",
+    "description": "정부 및 공공기관의 모든 데이터를 통합 제공하는 중앙 플랫폼 (10만개 이상 데이터셋)",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://data.busan.go.kr/bdip/opendata/dataSet.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-seoul-go-kr",
-    "category": "정부/공공기관",
-    "name": "서울시 열린데이터광장",
-    "description": "서울시 모든 공공데이터 통합 플랫폼",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://data.seoul.go.kr/",
-    "provider": "Gov"
-  },
-  {
-    "id": "gov-kr-openapi-info",
-    "category": "정부/공공기관",
-    "name": "정부24 공공서비스 API",
-    "description": "정부 공공서비스 정보 오픈API, 실시간 행정정보 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.gov.kr/openapi/info",
-    "provider": "Unknown"
-  },
-  {
-    "id": "mohw-go-kr-menu-es",
-    "category": "정부/공공기관",
-    "name": "보건복지부",
-    "description": "보건복지부의 정책, 법령, 재정, 감사, 연구정보 등 제공",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://www.mohw.go.kr/menu.es?mid=a10104010100",
-    "provider": "Gov"
-  },
-  {
-    "id": "open-assembly-go-kr-portal-openapi-main-do",
-    "category": "정부/공공기관",
-    "name": "열린국회정보 확장 API",
-    "description": "국회의원 표결정보, 발의법률안, 의안 상세정보, 연구보고서",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://open.assembly.go.kr/portal/openapi/main.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "kdata-or-kr-mydata",
-    "category": "정부/공공기관",
-    "name": "마이데이터 통합지원 API",
-    "description": "한국데이터산업진흥원 마이데이터 표준 API 서비스",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://www.kdata.or.kr/mydata",
-    "provider": "Gov"
-  },
-  {
-    "id": "egis-me-go-kr-api-intro-do",
-    "category": "정부/공공기관",
-    "name": "환경공간정보서비스 지도 API",
-    "description": "환경부 토지피복지도, 환경주제도, 생태자연도 공간정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://egis.me.go.kr/api/intro.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "ecolife-me-go-kr-ecolife-infocenter-openapi",
-    "category": "정부/공공기관",
-    "name": "초록누리 Open API",
-    "description": "환경부 환경정보 및 친환경 생활정보 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://ecolife.me.go.kr/ecolife/infoCenter/openApi",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-go-kr-data-15077871-openapi-do",
-    "category": "정부/공공기관",
-    "name": "행정안전부 행정표준코드",
-    "description": "법정동코드, 행정구역코드 등 표준코드 정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15077871/openapi.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-go-kr-dataset-3050988-openapi-do",
-    "category": "정부/공공기관",
-    "name": "국토교통부 실거래가",
-    "description": "아파트, 오피스텔, 단독다가구 등 실거래가 정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/dataset/3050988/openapi.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "opendata-hira-or-kr-op-opc-selectopenapiinfoview-do",
-    "category": "정부/공공기관",
-    "name": "건강보험심사평가원 병원정보",
-    "description": "전국 의료기관 기본정보 및 진료과목 정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://opendata.hira.or.kr/op/opc/selectOpenApiInfoView.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-go-kr-data-15084084-openapi-do",
-    "category": "정부/공공기관",
-    "name": "기상청 단기예보",
-    "description": "초단기실황, 초단기예보, 단기예보 정보 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15084084/openapi.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-go-kr-data-15059468-openapi-do",
-    "category": "정부/공공기관",
-    "name": "기상청 중기예보",
-    "description": "중기 기상예보 정보 조회 서비스",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15059468/openapi.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-kma-go-kr-api-selectapilist-do",
-    "category": "정부/공공기관",
-    "name": "기상청 생활기상지수",
-    "description": "자외선지수, 대기정체지수, 체감온도 등 생활기상정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://data.kma.go.kr/api/selectApiList.do?pgmNo=42",
-    "provider": "Gov"
-  },
-  {
-    "id": "api-visitkorea-or-kr",
-    "category": "정부/공공기관",
-    "name": "한국관광공사 TourAPI",
-    "description": "관광지, 숙박, 음식점, 축제 등 관광정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://api.visitkorea.or.kr/",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-go-kr-data-15125762-openapi-do",
-    "category": "정부/공공기관",
-    "name": "한국철도공사 열차운행정보",
-    "description": "KTX, 새마을호 등 열차 운행정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15125762/openapi.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "kosis-kr-serviceinfo-openapiguide-do",
-    "category": "정부/공공기관",
-    "name": "통계청 KOSIS",
-    "description": "국가통계포털의 134,586종 통계자료",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://kosis.kr/serviceInfo/openAPIGuide.do",
-    "provider": "Unknown"
-  },
-  {
-    "id": "data-go-kr-data-15073861-openapi-do",
-    "category": "정부/공공기관",
-    "name": "한국환경공단 에어코리아",
-    "description": "실시간 대기오염정보 및 미세먼지 데이터",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15073861/openapi.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "culture-go-kr-data-openapi-openapiinfo-do",
-    "category": "정부/공공기관",
-    "name": "문화체육관광부 문화정보",
-    "description": "공연, 전시, 문화재, 도서관 등 문화정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.culture.go.kr/data/openapi/openapiInfo.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-mafra-go-kr-main-do",
-    "category": "정부/공공기관",
-    "name": "농림축산식품부",
-    "description": "농촌, 농업, 축산, 유통소비 등 데이터 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://data.mafra.go.kr/main.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-go-kr-data-15076872-openapi-do",
-    "category": "정부/공공기관",
-    "name": "한국도로공사 교통정보",
-    "description": "실시간 고속도로 교통량 및 교통정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15076872/openapi.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-go-kr-tcs-dss-selectdatasetlist-do",
-    "category": "정부/공공기관",
-    "name": "한국토지주택공사(LH)",
-    "description": "분양임대공고, 사전청약, 임대주택 정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/tcs/dss/selectDataSetList.do?org=한국토지주택공사",
-    "provider": "Gov"
-  },
-  {
-    "id": "openapi-hrdkorea-or-kr-main",
-    "category": "정부/공공기관",
-    "name": "한국산업인력공단 HRD",
-    "description": "국가자격, 과정평가형자격, 일학습병행자격 정보 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://openapi.hrdkorea.or.kr/main",
+    "url": "https://www.data.go.kr/",
     "provider": "Gov"
   },
   {
@@ -287,23 +67,103 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "ntis-go-kr-rndopen-api-mng-apimain-do",
+    "id": "data-go-kr-dataset-3050988-openapi-do",
     "category": "정부/공공기관",
-    "name": "NTIS 국가과학기술정보",
-    "description": "국가R&D 과제정보, 성과정보 메타데이터 검색",
+    "name": "국토교통부 실거래가",
+    "description": "아파트, 오피스텔, 단독다가구 등 실거래가 정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.ntis.go.kr/rndopen/api/mng/apiMain.do",
+    "url": "https://www.data.go.kr/dataset/3050988/openapi.do",
     "provider": "Gov"
   },
   {
-    "id": "policy-nl-go-kr-pages-point-api-jsp",
+    "id": "data-go-kr-data-15084084-openapi-do",
     "category": "정부/공공기관",
-    "name": "정책정보포털 POINT",
-    "description": "최신정책동향, 온라인 정부간행물, 정책정보종합목록 제공",
+    "name": "기상청 단기예보",
+    "description": "초단기실황, 초단기예보, 단기예보 정보 제공",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://policy.nl.go.kr/pages/point/api.jsp",
+    "url": "https://www.data.go.kr/data/15084084/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-kma-go-kr-api-selectapilist-do",
+    "category": "정부/공공기관",
+    "name": "기상청 생활기상지수",
+    "description": "자외선지수, 대기정체지수, 체감온도 등 생활기상정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://data.kma.go.kr/api/selectApiList.do?pgmNo=42",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-go-kr-data-15059468-openapi-do",
+    "category": "정부/공공기관",
+    "name": "기상청 중기예보",
+    "description": "중기 기상예보 정보 조회 서비스",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15059468/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-mafra-go-kr-main-do",
+    "category": "정부/공공기관",
+    "name": "농림축산식품부",
+    "description": "농촌, 농업, 축산, 유통소비 등 데이터 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://data.mafra.go.kr/main.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "kdata-or-kr-mydata",
+    "category": "정부/공공기관",
+    "name": "마이데이터 통합지원 API",
+    "description": "한국데이터산업진흥원 마이데이터 표준 API 서비스",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://www.kdata.or.kr/mydata",
+    "provider": "Gov"
+  },
+  {
+    "id": "culture-go-kr-data-openapi-openapiinfo-do",
+    "category": "정부/공공기관",
+    "name": "문화체육관광부 문화정보",
+    "description": "공연, 전시, 문화재, 도서관 등 문화정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.culture.go.kr/data/openapi/openapiInfo.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "mohw-go-kr-menu-es",
+    "category": "정부/공공기관",
+    "name": "보건복지부",
+    "description": "보건복지부의 정책, 법령, 재정, 감사, 연구정보 등 제공",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://www.mohw.go.kr/menu.es?mid=a10104010100",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-busan-go-kr-bdip-opendata-dataset-do",
+    "category": "정부/공공기관",
+    "name": "부산광역시 빅데이터",
+    "description": "부산시 및 16개 구·군·공공기관의 공공데이터(교육, 공공행정, 문화, 식품, 안전, 교통 등) 통합 제공 포털",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://data.busan.go.kr/bdip/opendata/dataSet.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-seoul-go-kr",
+    "category": "정부/공공기관",
+    "name": "서울시 열린데이터광장",
+    "description": "서울시 모든 공공데이터 통합 플랫폼",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://data.seoul.go.kr/",
     "provider": "Gov"
   },
   {
@@ -317,14 +177,154 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "apis-map-kakao-com-web-guide",
-    "category": "지도/위치",
-    "name": "카카오맵",
-    "description": "지도 표시, 장소 검색, 좌표 변환, 경로 탐색",
+    "id": "open-assembly-go-kr-portal-openapi-main-do",
+    "category": "정부/공공기관",
+    "name": "열린국회정보 확장 API",
+    "description": "국회의원 표결정보, 발의법률안, 의안 상세정보, 연구보고서",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://apis.map.kakao.com/web/guide/",
-    "provider": "Kakao"
+    "url": "https://open.assembly.go.kr/portal/openapi/main.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-go-kr-tcs-dss-selectdatasetlist-do",
+    "category": "정부/공공기관",
+    "name": "예금보험공사",
+    "description": "금융기관 예금자보호 및 영업정지저축은행 정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/tcs/dss/selectDataSetList.do?org=예금보험공사",
+    "provider": "Gov"
+  },
+  {
+    "id": "gov-kr-openapi-info",
+    "category": "정부/공공기관",
+    "name": "정부24 공공서비스 API",
+    "description": "정부 공공서비스 정보 오픈API, 실시간 행정정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.gov.kr/openapi/info",
+    "provider": "Unknown"
+  },
+  {
+    "id": "policy-nl-go-kr-pages-point-api-jsp",
+    "category": "정부/공공기관",
+    "name": "정책정보포털 POINT",
+    "description": "최신정책동향, 온라인 정부간행물, 정책정보종합목록 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://policy.nl.go.kr/pages/point/api.jsp",
+    "provider": "Gov"
+  },
+  {
+    "id": "ecolife-me-go-kr-ecolife-infocenter-openapi",
+    "category": "정부/공공기관",
+    "name": "초록누리 Open API",
+    "description": "환경부 환경정보 및 친환경 생활정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://ecolife.me.go.kr/ecolife/infoCenter/openApi",
+    "provider": "Gov"
+  },
+  {
+    "id": "kosis-kr-serviceinfo-openapiguide-do",
+    "category": "정부/공공기관",
+    "name": "통계청 KOSIS",
+    "description": "국가통계포털의 134,586종 통계자료",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://kosis.kr/serviceInfo/openAPIGuide.do",
+    "provider": "Unknown"
+  },
+  {
+    "id": "api-visitkorea-or-kr",
+    "category": "정부/공공기관",
+    "name": "한국관광공사 TourAPI",
+    "description": "관광지, 숙박, 음식점, 축제 등 관광정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://api.visitkorea.or.kr/",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-go-kr-data-15076872-openapi-do",
+    "category": "정부/공공기관",
+    "name": "한국도로공사 교통정보",
+    "description": "실시간 고속도로 교통량 및 교통정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15076872/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "openapi-hrdkorea-or-kr-main",
+    "category": "정부/공공기관",
+    "name": "한국산업인력공단 HRD",
+    "description": "국가자격, 과정평가형자격, 일학습병행자격 정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://openapi.hrdkorea.or.kr/main",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-go-kr-data-15125762-openapi-do",
+    "category": "정부/공공기관",
+    "name": "한국철도공사 열차운행정보",
+    "description": "KTX, 새마을호 등 열차 운행정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15125762/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-go-kr-data-15073861-openapi-do",
+    "category": "정부/공공기관",
+    "name": "한국환경공단 에어코리아",
+    "description": "실시간 대기오염정보 및 미세먼지 데이터",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15073861/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-go-kr-data-15077871-openapi-do",
+    "category": "정부/공공기관",
+    "name": "행정안전부 행정표준코드",
+    "description": "법정동코드, 행정구역코드 등 표준코드 정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15077871/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "egis-me-go-kr-api-intro-do",
+    "category": "정부/공공기관",
+    "name": "환경공간정보서비스 지도 API",
+    "description": "환경부 토지피복지도, 환경주제도, 생태자연도 공간정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://egis.me.go.kr/api/intro.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "ntis-go-kr-rndopen-api-mng-apimain-do",
+    "category": "정부/공공기관",
+    "name": "NTIS 국가과학기술정보",
+    "description": "국가R&D 과제정보, 성과정보 메타데이터 검색",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.ntis.go.kr/rndopen/api/mng/apiMain.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "map-ngii-go-kr-mi-openkey-openkeyinfo-do",
+    "category": "지도/위치",
+    "name": "국토정보플랫폼",
+    "description": "수치지도, 항공사진, 정사영상, DEM, 국가관심지점(POI)",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://map.ngii.go.kr/mi/openKey/openKeyInfo.do",
+    "provider": "Gov"
   },
   {
     "id": "ncloud-com-product-applicationservice-maps",
@@ -335,16 +335,6 @@ export const apis: ApiItem[] = [
     "cors": "Unknown",
     "url": "https://www.ncloud.com/product/applicationService/maps",
     "provider": "Naver"
-  },
-  {
-    "id": "openapi-sk-com",
-    "category": "지도/위치",
-    "name": "T맵 API",
-    "description": "SK텔레콤의 내비게이션 및 경로 탐색 API",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://openapi.sk.com/",
-    "provider": "SK"
   },
   {
     "id": "vworld-kr-v4po-openapi-s001-do",
@@ -367,14 +357,24 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "map-ngii-go-kr-mi-openkey-openkeyinfo-do",
+    "id": "apis-map-kakao-com-web-guide",
     "category": "지도/위치",
-    "name": "국토정보플랫폼",
-    "description": "수치지도, 항공사진, 정사영상, DEM, 국가관심지점(POI)",
+    "name": "카카오맵",
+    "description": "지도 표시, 장소 검색, 좌표 변환, 경로 탐색",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://map.ngii.go.kr/mi/openKey/openKeyInfo.do",
-    "provider": "Gov"
+    "url": "https://apis.map.kakao.com/web/guide/",
+    "provider": "Kakao"
+  },
+  {
+    "id": "openapi-sk-com",
+    "category": "지도/위치",
+    "name": "T맵 API",
+    "description": "SK텔레콤의 내비게이션 및 경로 탐색 API",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://openapi.sk.com/",
+    "provider": "SK"
   },
   {
     "id": "openapi-kftc-or-kr-service-openbanking",
@@ -387,24 +387,34 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "obizapi-kbstar-com-quics",
+    "id": "developers-pay-naver-com",
     "category": "금융/결제",
-    "name": "KB국민은행 Open API",
-    "description": "KB 종합 금융서비스 및 BaaS 플랫폼",
+    "name": "네이버페이 API",
+    "description": "네이버페이 결제, 정기결제, 자동결제 API",
     "auth": "OAuth",
     "cors": "Unknown",
-    "url": "https://obizapi.kbstar.com/quics?page=C108082",
+    "url": "https://developers.pay.naver.com/",
+    "provider": "Naver"
+  },
+  {
+    "id": "docs-bootpay-co-kr",
+    "category": "금융/결제",
+    "name": "부트페이 API",
+    "description": "통합 PG 연동 서비스, 이니시스·KCP·다날 등 다중 PG사 지원",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://docs.bootpay.co.kr/",
     "provider": "Unknown"
   },
   {
-    "id": "apiportal-kbfg-com",
+    "id": "developer-samsung-com-pay",
     "category": "금융/결제",
-    "name": "KB API 포탈",
-    "description": "KB금융그룹 종합 금융 API 서비스 (800+ API 제공)",
-    "auth": "OAuth",
+    "name": "삼성페이 API",
+    "description": "모바일 결제 및 디지털 지갑 서비스",
+    "auth": "Partnership",
     "cors": "Unknown",
-    "url": "https://apiportal.kbfg.com/",
-    "provider": "Unknown"
+    "url": "https://developer.samsung.com/pay",
+    "provider": "Samsung"
   },
   {
     "id": "openapi-shinhan-com",
@@ -427,64 +437,14 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "hanafnapimarket-com",
+    "id": "developers-kakaopay-com",
     "category": "금융/결제",
-    "name": "하나금융그룹 Open API",
-    "description": "하나금융그룹 API 마켓플레이스",
+    "name": "카카오페이",
+    "description": "온라인 결제, 정기결제, 송금 등 종합 결제 솔루션",
     "auth": "OAuth",
     "cors": "Unknown",
-    "url": "https://www.hanafnapimarket.com/",
-    "provider": "Unknown"
-  },
-  {
-    "id": "developers-nonghyup-com-center-ce-1020",
-    "category": "금융/결제",
-    "name": "NH농협은행 Open API",
-    "description": "농협 금융 API 개발자센터",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://developers.nonghyup.com/center/CE_1020",
-    "provider": "Unknown"
-  },
-  {
-    "id": "apiportal-koreainvestment-com-intro",
-    "category": "금융/결제",
-    "name": "한국투자증권 KIS API",
-    "description": "국내외 주식 시세 및 주문 API",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://apiportal.koreainvestment.com/intro",
-    "provider": "Unknown"
-  },
-  {
-    "id": "ecos-bok-or-kr-api",
-    "category": "금융/결제",
-    "name": "한국은행 Open API",
-    "description": "경제통계정보 제공 API",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://ecos.bok.or.kr/api/",
-    "provider": "Gov"
-  },
-  {
-    "id": "koreaexim-go-kr-ir-hphkir019m01",
-    "category": "금융/결제",
-    "name": "한국수출입은행 Open API",
-    "description": "현재환율, 대출금리, 국제금리 정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.koreaexim.go.kr/ir/HPHKIR019M01",
-    "provider": "Gov"
-  },
-  {
-    "id": "docs-tosspayments-com-reference",
-    "category": "금융/결제",
-    "name": "토스페이먼츠",
-    "description": "통합 결제 API (카드, 가상계좌, 간편결제)",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://docs.tosspayments.com/reference",
-    "provider": "Unknown"
+    "url": "https://developers.kakaopay.com/",
+    "provider": "Kakao"
   },
   {
     "id": "docs-pay-toss-im-reference",
@@ -497,34 +457,14 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "developers-pay-naver-com",
+    "id": "docs-tosspayments-com-reference",
     "category": "금융/결제",
-    "name": "네이버페이 API",
-    "description": "네이버페이 결제, 정기결제, 자동결제 API",
-    "auth": "OAuth",
+    "name": "토스페이먼츠",
+    "description": "통합 결제 API (카드, 가상계좌, 간편결제)",
+    "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://developers.pay.naver.com/",
-    "provider": "Naver"
-  },
-  {
-    "id": "developers-kakaopay-com",
-    "category": "금융/결제",
-    "name": "카카오페이",
-    "description": "온라인 결제, 정기결제, 송금 등 종합 결제 솔루션",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://developers.kakaopay.com/",
-    "provider": "Kakao"
-  },
-  {
-    "id": "developer-samsung-com-pay",
-    "category": "금융/결제",
-    "name": "삼성페이 API",
-    "description": "모바일 결제 및 디지털 지갑 서비스",
-    "auth": "Partnership",
-    "cors": "Unknown",
-    "url": "https://developer.samsung.com/pay",
-    "provider": "Samsung"
+    "url": "https://docs.tosspayments.com/reference",
+    "provider": "Unknown"
   },
   {
     "id": "developers-payco-com-guide",
@@ -534,26 +474,6 @@ export const apis: ApiItem[] = [
     "auth": "OAuth",
     "cors": "Unknown",
     "url": "https://developers.payco.com/guide",
-    "provider": "Unknown"
-  },
-  {
-    "id": "developer-codef-io",
-    "category": "금융/결제",
-    "name": "CODEF API",
-    "description": "금융, 보험, 통신 데이터 통합 연동",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://developer.codef.io/",
-    "provider": "Unknown"
-  },
-  {
-    "id": "docs-bootpay-co-kr",
-    "category": "금융/결제",
-    "name": "부트페이 API",
-    "description": "통합 PG 연동 서비스, 이니시스·KCP·다날 등 다중 PG사 지원",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://docs.bootpay.co.kr/",
     "provider": "Unknown"
   },
   {
@@ -567,6 +487,16 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "hanafnapimarket-com",
+    "category": "금융/결제",
+    "name": "하나금융그룹 Open API",
+    "description": "하나금융그룹 API 마켓플레이스",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://www.hanafnapimarket.com/",
+    "provider": "Unknown"
+  },
+  {
     "id": "hyphen-im",
     "category": "금융/결제",
     "name": "하이픈 API 마켓플레이스",
@@ -574,6 +504,76 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://hyphen.im/",
+    "provider": "Unknown"
+  },
+  {
+    "id": "koreaexim-go-kr-ir-hphkir019m01",
+    "category": "금융/결제",
+    "name": "한국수출입은행 Open API",
+    "description": "현재환율, 대출금리, 국제금리 정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.koreaexim.go.kr/ir/HPHKIR019M01",
+    "provider": "Gov"
+  },
+  {
+    "id": "ecos-bok-or-kr-api",
+    "category": "금융/결제",
+    "name": "한국은행 Open API",
+    "description": "경제통계정보 제공 API",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://ecos.bok.or.kr/api/",
+    "provider": "Gov"
+  },
+  {
+    "id": "apiportal-koreainvestment-com-intro",
+    "category": "금융/결제",
+    "name": "한국투자증권 KIS API",
+    "description": "국내외 주식 시세 및 주문 API",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://apiportal.koreainvestment.com/intro",
+    "provider": "Unknown"
+  },
+  {
+    "id": "developer-codef-io",
+    "category": "금융/결제",
+    "name": "CODEF API",
+    "description": "금융, 보험, 통신 데이터 통합 연동",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://developer.codef.io/",
+    "provider": "Unknown"
+  },
+  {
+    "id": "apiportal-kbfg-com",
+    "category": "금융/결제",
+    "name": "KB API 포탈",
+    "description": "KB금융그룹 종합 금융 API 서비스 (800+ API 제공)",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://apiportal.kbfg.com/",
+    "provider": "Unknown"
+  },
+  {
+    "id": "obizapi-kbstar-com-quics",
+    "category": "금융/결제",
+    "name": "KB국민은행 Open API",
+    "description": "KB 종합 금융서비스 및 BaaS 플랫폼",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://obizapi.kbstar.com/quics?page=C108082",
+    "provider": "Unknown"
+  },
+  {
+    "id": "developers-nonghyup-com-center-ce-1020",
+    "category": "금융/결제",
+    "name": "NH농협은행 Open API",
+    "description": "농협 금융 API 개발자센터",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://developers.nonghyup.com/center/CE_1020",
     "provider": "Unknown"
   },
   {
@@ -587,14 +587,24 @@ export const apis: ApiItem[] = [
     "provider": "KT"
   },
   {
-    "id": "developers-hyundai-com",
+    "id": "data-go-kr-data-15058012-openapi-do",
     "category": "교통",
-    "name": "현대자동차 Developers",
-    "description": "차량 제원, 운행정보, 주행거리, 차량상태, 운전습관",
-    "auth": "OAuth",
+    "name": "경기도 버스정보",
+    "description": "경기도 시내/시외버스 실시간 정보",
+    "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://developers.hyundai.com/",
-    "provider": "Unknown"
+    "url": "https://www.data.go.kr/data/15058012/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-go-kr-data-15040463-openapi-do",
+    "category": "교통",
+    "name": "국토교통부 교통소통정보",
+    "description": "고속도로 및 국도 실시간 속도정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15040463/openapi.do?recommendDataYn=Y",
+    "provider": "Gov"
   },
   {
     "id": "developers-kia-com",
@@ -607,6 +617,26 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "data-seoul-go-kr-datalist-oa-15493-a-1-datasetview-do",
+    "category": "교통",
+    "name": "따릉이(서울자전거)",
+    "description": "서울시 공공자전거 실시간 대여정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://data.seoul.go.kr/dataList/OA-15493/A/1/datasetView.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-kric-go-kr-rips-serviceinfo-openapi-introduce-do",
+    "category": "교통",
+    "name": "레일포털(KRIC)",
+    "description": "철도산업정보센터 전국 철도 정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://data.kric.go.kr/rips/serviceInfo/openapi/introduce.do",
+    "provider": "Gov"
+  },
+  {
     "id": "topis-seoul-go-kr-refroom-openrefroom-4-do",
     "category": "교통",
     "name": "서울 TOPIS 교통정보",
@@ -614,26 +644,6 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://topis.seoul.go.kr/refRoom/openRefRoom_4.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-seoul-go-kr-datalist-oa-12764-a-1-datasetview-do",
-    "category": "교통",
-    "name": "서울시 지하철 실시간 도착정보",
-    "description": "서울 지하철 2~8호선 실시간 도착정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://data.seoul.go.kr/dataList/OA-12764/A/1/datasetView.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "api-bus-go-kr-contents-sub01-wisopenapi-html",
-    "category": "교통",
-    "name": "서울시 버스 도착정보",
-    "description": "서울시 시내버스 실시간 도착정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "http://api.bus.go.kr/contents/sub01/wisOpenApi.html",
     "provider": "Gov"
   },
   {
@@ -647,44 +657,24 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "data-go-kr-data-15058012-openapi-do",
+    "id": "api-bus-go-kr-contents-sub01-wisopenapi-html",
     "category": "교통",
-    "name": "경기도 버스정보",
-    "description": "경기도 시내/시외버스 실시간 정보",
+    "name": "서울시 버스 도착정보",
+    "description": "서울시 시내버스 실시간 도착정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15058012/openapi.do",
+    "url": "http://api.bus.go.kr/contents/sub01/wisOpenApi.html",
     "provider": "Gov"
   },
   {
-    "id": "lab-odsay-com-guide-guide",
+    "id": "data-seoul-go-kr-datalist-oa-12764-a-1-datasetview-do",
     "category": "교통",
-    "name": "ODsay 대중교통 API",
-    "description": "전국 대중교통, 고속버스, 항공편 통합 정보",
+    "name": "서울시 지하철 실시간 도착정보",
+    "description": "서울 지하철 2~8호선 실시간 도착정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://lab.odsay.com/guide/guide",
-    "provider": "Unknown"
-  },
-  {
-    "id": "data-go-kr-data-15040463-openapi-do",
-    "category": "교통",
-    "name": "국토교통부 교통소통정보",
-    "description": "고속도로 및 국도 실시간 속도정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15040463/openapi.do?recommendDataYn=Y",
+    "url": "https://data.seoul.go.kr/dataList/OA-12764/A/1/datasetView.do",
     "provider": "Gov"
-  },
-  {
-    "id": "developers-kakaomobility-com-product-api",
-    "category": "교통",
-    "name": "카카오모빌리티 길찾기",
-    "description": "모빌리티 서비스 개발용 기술제품",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.kakaomobility.com/product/api",
-    "provider": "Kakao"
   },
   {
     "id": "kakaotbusinessapiinfo-oopy-io",
@@ -697,24 +687,34 @@ export const apis: ApiItem[] = [
     "provider": "Kakao"
   },
   {
-    "id": "data-kric-go-kr-rips-serviceinfo-openapi-introduce-do",
+    "id": "developers-kakaomobility-com-product-api",
     "category": "교통",
-    "name": "레일포털(KRIC)",
-    "description": "철도산업정보센터 전국 철도 정보",
+    "name": "카카오모빌리티 길찾기",
+    "description": "모빌리티 서비스 개발용 기술제품",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://data.kric.go.kr/rips/serviceInfo/openapi/introduce.do",
-    "provider": "Gov"
+    "url": "https://developers.kakaomobility.com/product/api",
+    "provider": "Kakao"
   },
   {
-    "id": "data-seoul-go-kr-datalist-oa-15493-a-1-datasetview-do",
+    "id": "developers-hyundai-com",
     "category": "교통",
-    "name": "따릉이(서울자전거)",
-    "description": "서울시 공공자전거 실시간 대여정보",
+    "name": "현대자동차 Developers",
+    "description": "차량 제원, 운행정보, 주행거리, 차량상태, 운전습관",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://developers.hyundai.com/",
+    "provider": "Unknown"
+  },
+  {
+    "id": "lab-odsay-com-guide-guide",
+    "category": "교통",
+    "name": "ODsay 대중교통 API",
+    "description": "전국 대중교통, 고속버스, 항공편 통합 정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://data.seoul.go.kr/dataList/OA-15493/A/1/datasetView.do",
-    "provider": "Gov"
+    "url": "https://lab.odsay.com/guide/guide",
+    "provider": "Unknown"
   },
   {
     "id": "apihub-kma-go-kr",
@@ -737,6 +737,76 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "data-go-kr-data-15028236-openapi-do",
+    "category": "날씨/환경",
+    "name": "대기질정보 서비스",
+    "description": "연돌기준, 대기질분야 조사·예측 정보 및 공간정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15028236/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-11-html",
+    "category": "날씨/환경",
+    "name": "동식물상정보 서비스",
+    "description": "동식물상 조사 정보 및 생태계 보전 관련 정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_11.html",
+    "provider": "Gov"
+  },
+  {
+    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-15-html",
+    "category": "날씨/환경",
+    "name": "사업구역정보 서비스",
+    "description": "환경영향평가 사업구역 정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_15.html",
+    "provider": "Gov"
+  },
+  {
+    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-13-html",
+    "category": "날씨/환경",
+    "name": "소음진동정보 서비스",
+    "description": "소음·진동 조사·예측 정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_13.html",
+    "provider": "Gov"
+  },
+  {
+    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-06-html",
+    "category": "날씨/환경",
+    "name": "수리수문정보 서비스",
+    "description": "수리수문분야 조사·예측 정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_06.html",
+    "provider": "Gov"
+  },
+  {
+    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-05-html",
+    "category": "날씨/환경",
+    "name": "수질정보 서비스",
+    "description": "수질조사 개요·조사·예측 정보 및 조사지점 공간정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_05.html",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-go-kr-data-15083164-filedata-do",
+    "category": "날씨/환경",
+    "name": "악취정보 서비스",
+    "description": "악취분야 조사·예측 속성정보 및 조사지점 공간정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15083164/fileData.do",
+    "provider": "Gov"
+  },
+  {
     "id": "data-go-kr-data-15109350-openapi-do",
     "category": "날씨/환경",
     "name": "에어코리아 대기오염 예보정보",
@@ -747,13 +817,33 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "data-go-kr-data-15076352-openapi-do",
+    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-02-html",
     "category": "날씨/환경",
-    "name": "한국환경공단 전기차충전소",
-    "description": "전국 전기차 충전소 정보, 충전기 상태정보",
+    "name": "온실가스정보 서비스",
+    "description": "환경영향평가 사업의 온실가스 조사·예측 정보 제공",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15076352/openapi.do",
+    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_02.html",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-go-kr-data-15028239-openapi-do",
+    "category": "날씨/환경",
+    "name": "위생공중보건정보 서비스",
+    "description": "위생공중보건분야 조사 속성정보(스타이렌, 염화수소 등)",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15028239/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-14-html",
+    "category": "날씨/환경",
+    "name": "인구주거정보 서비스",
+    "description": "인구 및 주거 관련 정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_14.html",
     "provider": "Gov"
   },
   {
@@ -777,96 +867,6 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "data-go-kr-data-15028236-openapi-do",
-    "category": "날씨/환경",
-    "name": "대기질정보 서비스",
-    "description": "연돌기준, 대기질분야 조사·예측 정보 및 공간정보 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15028236/openapi.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-02-html",
-    "category": "날씨/환경",
-    "name": "온실가스정보 서비스",
-    "description": "환경영향평가 사업의 온실가스 조사·예측 정보 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_02.html",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-go-kr-data-15083164-filedata-do",
-    "category": "날씨/환경",
-    "name": "악취정보 서비스",
-    "description": "악취분야 조사·예측 속성정보 및 조사지점 공간정보 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15083164/fileData.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-go-kr-data-15028239-openapi-do",
-    "category": "날씨/환경",
-    "name": "위생공중보건정보 서비스",
-    "description": "위생공중보건분야 조사 속성정보(스타이렌, 염화수소 등)",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15028239/openapi.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-05-html",
-    "category": "날씨/환경",
-    "name": "수질정보 서비스",
-    "description": "수질조사 개요·조사·예측 정보 및 조사지점 공간정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_05.html",
-    "provider": "Gov"
-  },
-  {
-    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-06-html",
-    "category": "날씨/환경",
-    "name": "수리수문정보 서비스",
-    "description": "수리수문분야 조사·예측 정보 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_06.html",
-    "provider": "Gov"
-  },
-  {
-    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-07-html",
-    "category": "날씨/환경",
-    "name": "해양환경정보 서비스",
-    "description": "해양환경분야 조사·예측 정보 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_07.html",
-    "provider": "Gov"
-  },
-  {
-    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-08-html",
-    "category": "날씨/환경",
-    "name": "토지이용정보 서비스",
-    "description": "토지이용 현황 및 계획 정보 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_08.html",
-    "provider": "Gov"
-  },
-  {
-    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-09-html",
-    "category": "날씨/환경",
-    "name": "토양정보 서비스",
-    "description": "토양 기본정보 및 조사 정보 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_09.html",
-    "provider": "Gov"
-  },
-  {
     "id": "eiass-go-kr-openapiguide-kei-html-chapter04-10-html",
     "category": "날씨/환경",
     "name": "지형지질정보 서비스",
@@ -874,16 +874,6 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_10.html",
-    "provider": "Gov"
-  },
-  {
-    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-11-html",
-    "category": "날씨/환경",
-    "name": "동식물상정보 서비스",
-    "description": "동식물상 조사 정보 및 생태계 보전 관련 정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_11.html",
     "provider": "Gov"
   },
   {
@@ -897,33 +887,53 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-13-html",
+    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-09-html",
     "category": "날씨/환경",
-    "name": "소음진동정보 서비스",
-    "description": "소음·진동 조사·예측 정보 제공",
+    "name": "토양정보 서비스",
+    "description": "토양 기본정보 및 조사 정보 제공",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_13.html",
+    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_09.html",
     "provider": "Gov"
   },
   {
-    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-14-html",
+    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-08-html",
     "category": "날씨/환경",
-    "name": "인구주거정보 서비스",
-    "description": "인구 및 주거 관련 정보 제공",
+    "name": "토지이용정보 서비스",
+    "description": "토지이용 현황 및 계획 정보 제공",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_14.html",
+    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_08.html",
     "provider": "Gov"
   },
   {
-    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-15-html",
+    "id": "data-go-kr-data-15076352-openapi-do",
     "category": "날씨/환경",
-    "name": "사업구역정보 서비스",
-    "description": "환경영향평가 사업구역 정보 제공",
+    "name": "한국환경공단 전기차충전소",
+    "description": "전국 전기차 충전소 정보, 충전기 상태정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_15.html",
+    "url": "https://www.data.go.kr/data/15076352/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "eiass-go-kr-openapiguide-kei-html-chapter04-07-html",
+    "category": "날씨/환경",
+    "name": "해양환경정보 서비스",
+    "description": "해양환경분야 조사·예측 정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.eiass.go.kr/openapiguide/kei_html/chapter04_07.html",
+    "provider": "Gov"
+  },
+  {
+    "id": "nhis-or-kr-nhis-together-wbhaec10800m01-do",
+    "category": "의료/건강",
+    "name": "국민건강보험공단",
+    "description": "장기요양 시설 정보와 건강검진 기관 정보, 예약 및 검진 일정 정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.nhis.or.kr/nhis/together/wbhaec10800m01.do",
     "provider": "Gov"
   },
   {
@@ -947,16 +957,6 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "nhis-or-kr-nhis-together-wbhaec10800m01-do",
-    "category": "의료/건강",
-    "name": "국민건강보험공단",
-    "description": "장기요양 시설 정보와 건강검진 기관 정보, 예약 및 검진 일정 정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.nhis.or.kr/nhis/together/wbhaec10800m01.do",
-    "provider": "Gov"
-  },
-  {
     "id": "e-gen-or-kr-nemc-open-api-do",
     "category": "의료/건강",
     "name": "중앙응급의료센터",
@@ -977,13 +977,13 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "schoolinfo-go-kr-ng-go-pnnggo-a01-l0-do",
+    "id": "opendict-korean-go-kr-service-openapiinfo",
     "category": "교육",
-    "name": "학교알리미",
-    "description": "전국 초중고 학교 기본정보",
+    "name": "국립국어원 우리말샘",
+    "description": "표준국어대사전, 방언, 외래어 정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.schoolinfo.go.kr/ng/go/pnnggo_a01_l0.do",
+    "url": "https://opendict.korean.go.kr/service/openApiInfo",
     "provider": "Gov"
   },
   {
@@ -1017,13 +1017,13 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "data-go-kr-data-3046254-openapi-do",
+    "id": "schoolinfo-go-kr-ng-go-pnnggo-a01-l0-do",
     "category": "교육",
-    "name": "한국교육학술정보원 학술연구정보",
-    "description": "KERIS 학술논문, 연구정보 검색 서비스",
+    "name": "학교알리미",
+    "description": "전국 초중고 학교 기본정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/3046254/openapi.do",
+    "url": "https://www.schoolinfo.go.kr/ng/go/pnnggo_a01_l0.do",
     "provider": "Gov"
   },
   {
@@ -1037,24 +1037,14 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "opendict-korean-go-kr-service-openapiinfo",
+    "id": "data-go-kr-data-3046254-openapi-do",
     "category": "교육",
-    "name": "국립국어원 우리말샘",
-    "description": "표준국어대사전, 방언, 외래어 정보",
+    "name": "한국교육학술정보원 학술연구정보",
+    "description": "KERIS 학술논문, 연구정보 검색 서비스",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://opendict.korean.go.kr/service/openApiInfo",
+    "url": "https://www.data.go.kr/data/3046254/openapi.do",
     "provider": "Gov"
-  },
-  {
-    "id": "airbnb-com-help-article-3418",
-    "category": "부동산",
-    "name": "Airbnb API",
-    "description": "숙소 관리, 예약 관리 (B2B 파트너십 필수)",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://www.airbnb.com/help/article/3418",
-    "provider": "Unknown"
   },
   {
     "id": "data-go-kr-data-15126469-openapi-do",
@@ -1087,43 +1077,13 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "culture-go-kr-data-main-main-do",
-    "category": "문화/관광",
-    "name": "문화공공데이터광장",
-    "description": "박물관, 미술관, 공연, 문화재 정보",
-    "auth": "ApiKey",
+    "id": "airbnb-com-help-article-3418",
+    "category": "부동산",
+    "name": "Airbnb API",
+    "description": "숙소 관리, 예약 관리 (B2B 파트너십 필수)",
+    "auth": "OAuth",
     "cors": "Unknown",
-    "url": "https://www.culture.go.kr/data/main/main.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "kopis-or-kr-por-cs-openapi-openapiinfo-do",
-    "category": "문화/관광",
-    "name": "KOPIS 공연예술통합전산망",
-    "description": "공연정보, 공연장정보, 예매정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.kopis.or.kr/por/cs/openapi/openApiInfo.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "kcisa-kr-kr-contents-open-opendata-view-do",
-    "category": "문화/관광",
-    "name": "한국문화정보원",
-    "description": "문화콘텐츠 오픈 API",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.kcisa.kr/kr/contents/open_openData/view.do",
-    "provider": "Unknown"
-  },
-  {
-    "id": "data4library-kr-apiutilization",
-    "category": "문화/관광",
-    "name": "도서관 정보나루",
-    "description": "전국 공공도서관에서 수집한 회원·장서·대출 데이터 등을 제공",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data4library.kr/apiUtilization",
+    "url": "https://www.airbnb.com/help/article/3418",
     "provider": "Unknown"
   },
   {
@@ -1137,14 +1097,44 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "kosis-kr-openapi",
-    "category": "통계/데이터",
-    "name": "통계청 KOSIS 통계자료",
-    "description": "국가통계 데이터 조회 서비스",
+    "id": "data4library-kr-apiutilization",
+    "category": "문화/관광",
+    "name": "도서관 정보나루",
+    "description": "전국 공공도서관에서 수집한 회원·장서·대출 데이터 등을 제공",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://kosis.kr/openapi/?sso=ok",
+    "url": "https://www.data4library.kr/apiUtilization",
     "provider": "Unknown"
+  },
+  {
+    "id": "culture-go-kr-data-main-main-do",
+    "category": "문화/관광",
+    "name": "문화공공데이터광장",
+    "description": "박물관, 미술관, 공연, 문화재 정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.culture.go.kr/data/main/main.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "kcisa-kr-kr-contents-open-opendata-view-do",
+    "category": "문화/관광",
+    "name": "한국문화정보원",
+    "description": "문화콘텐츠 오픈 API",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.kcisa.kr/kr/contents/open_openData/view.do",
+    "provider": "Unknown"
+  },
+  {
+    "id": "kopis-or-kr-por-cs-openapi-openapiinfo-do",
+    "category": "문화/관광",
+    "name": "KOPIS 공연예술통합전산망",
+    "description": "공연정보, 공연장정보, 예매정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.kopis.or.kr/por/cs/openapi/openApiInfo.do",
+    "provider": "Gov"
   },
   {
     "id": "bigkinds-or-kr",
@@ -1157,14 +1147,14 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "api-ncloud-docs-com-docs-ai-naver-clovastudio-summary",
-    "category": "인공지능",
-    "name": "네이버 클라우드 CLOVA Studio",
-    "description": "한국어 특화 생성형 AI 플랫폼",
+    "id": "kosis-kr-openapi",
+    "category": "통계/데이터",
+    "name": "통계청 KOSIS 통계자료",
+    "description": "국가통계 데이터 조회 서비스",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://api.ncloud-docs.com/docs/ai-naver-clovastudio-summary",
-    "provider": "Naver"
+    "url": "https://kosis.kr/openapi/?sso=ok",
+    "provider": "Unknown"
   },
   {
     "id": "developers-naver-com-docs-clova-api-cfr-api-guide-md",
@@ -1187,24 +1177,14 @@ export const apis: ApiItem[] = [
     "provider": "Naver"
   },
   {
-    "id": "developers-upstage-ai",
+    "id": "api-ncloud-docs-com-docs-ai-naver-clovastudio-summary",
     "category": "인공지능",
-    "name": "Upstage Solar LLM",
-    "description": "대화형 LLM, Document AI, OCR, Embedding",
+    "name": "네이버 클라우드 CLOVA Studio",
+    "description": "한국어 특화 생성형 AI 플랫폼",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://developers.upstage.ai/",
-    "provider": "Unknown"
-  },
-  {
-    "id": "samsungsds-com-us-ai-fabrix-fabrix-html",
-    "category": "인공지능",
-    "name": "삼성SDS FabriX",
-    "description": "멀티 LLM 기업용 생성형 AI 플랫폼",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.samsungsds.com/us/ai-fabrix/fabrix.html",
-    "provider": "Samsung"
+    "url": "https://api.ncloud-docs.com/docs/ai-naver-clovastudio-summary",
+    "provider": "Naver"
   },
   {
     "id": "developer-samsung-com-bixby",
@@ -1217,14 +1197,24 @@ export const apis: ApiItem[] = [
     "provider": "Samsung"
   },
   {
-    "id": "github-com-skt-ai-a-x-4-0",
+    "id": "samsungsds-com-us-ai-fabrix-fabrix-html",
     "category": "인공지능",
-    "name": "SKT A.X 4.0",
-    "description": "한국어 특화 대규모 언어모델",
+    "name": "삼성SDS FabriX",
+    "description": "멀티 LLM 기업용 생성형 AI 플랫폼",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://github.com/SKT-AI/A.X-4.0",
-    "provider": "SK"
+    "url": "https://www.samsungsds.com/us/ai-fabrix/fabrix.html",
+    "provider": "Samsung"
+  },
+  {
+    "id": "aihub-or-kr",
+    "category": "인공지능",
+    "name": "AI Hub",
+    "description": "AI 학습용 데이터셋",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://aihub.or.kr",
+    "provider": "Gov"
   },
   {
     "id": "epretx-etri-re-kr",
@@ -1237,14 +1227,64 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "aihub-or-kr",
+    "id": "github-com-skt-ai-a-x-4-0",
     "category": "인공지능",
-    "name": "AI Hub",
-    "description": "AI 학습용 데이터셋",
+    "name": "SKT A.X 4.0",
+    "description": "한국어 특화 대규모 언어모델",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://aihub.or.kr",
-    "provider": "Gov"
+    "url": "https://github.com/SKT-AI/A.X-4.0",
+    "provider": "SK"
+  },
+  {
+    "id": "developers-upstage-ai",
+    "category": "인공지능",
+    "name": "Upstage Document AI",
+    "description": "문서 파싱, 레이아웃 분석, 정보 추출",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.upstage.ai/",
+    "provider": "Unknown"
+  },
+  {
+    "id": "developers-naver-com-docs-serviceapi-search-shopping-shoppin",
+    "category": "쇼핑/커머스",
+    "name": "네이버 쇼핑 검색 API",
+    "description": "네이버 쇼핑 상품 검색 서비스",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md",
+    "provider": "Naver"
+  },
+  {
+    "id": "developers-naver-com-docs-serviceapi-datalab-shopping-shoppi",
+    "category": "쇼핑/커머스",
+    "name": "네이버 쇼핑인사이트 API",
+    "description": "쇼핑 분야별 검색 트렌드 데이터",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md",
+    "provider": "Naver"
+  },
+  {
+    "id": "apicenter-commerce-naver-com-ko-basic-commerce-api",
+    "category": "쇼핑/커머스",
+    "name": "네이버 커머스 API",
+    "description": "스마트스토어 판매자 전용 상품/주문 관리",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://apicenter.commerce.naver.com/ko/basic/commerce-api",
+    "provider": "Naver"
+  },
+  {
+    "id": "developer-login-wonders-work",
+    "category": "쇼핑/커머스",
+    "name": "위메프 로그인",
+    "description": "위메프 로그인 OAuth 2.0 (제휴사 전용)",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://developer.login.wonders.work/",
+    "provider": "Unknown"
   },
   {
     "id": "developers-coupangcorp-com-hc-ko",
@@ -1277,46 +1317,6 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "developers-naver-com-docs-serviceapi-search-shopping-shoppin",
-    "category": "쇼핑/커머스",
-    "name": "네이버 쇼핑 검색 API",
-    "description": "네이버 쇼핑 상품 검색 서비스",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md",
-    "provider": "Naver"
-  },
-  {
-    "id": "apicenter-commerce-naver-com-ko-basic-commerce-api",
-    "category": "쇼핑/커머스",
-    "name": "네이버 커머스 API",
-    "description": "스마트스토어 판매자 전용 상품/주문 관리",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://apicenter.commerce.naver.com/ko/basic/commerce-api",
-    "provider": "Naver"
-  },
-  {
-    "id": "developers-naver-com-docs-serviceapi-datalab-shopping-shoppi",
-    "category": "쇼핑/커머스",
-    "name": "네이버 쇼핑인사이트 API",
-    "description": "쇼핑 분야별 검색 트렌드 데이터",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.naver.com/docs/serviceapi/datalab/shopping/shopping.md",
-    "provider": "Naver"
-  },
-  {
-    "id": "developer-login-wonders-work",
-    "category": "쇼핑/커머스",
-    "name": "위메프 로그인",
-    "description": "위메프 로그인 OAuth 2.0 (제휴사 전용)",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://developer.login.wonders.work/",
-    "provider": "Unknown"
-  },
-  {
     "id": "etapi-gmarket-com-category-ea-b3-b5-ec-a7-80",
     "category": "쇼핑/커머스",
     "name": "G마켓/옥션 ESM Trading API",
@@ -1337,16 +1337,6 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "tracking-sweettracker-co-kr",
-    "category": "배송/물류",
-    "name": "SweetTracker 스마트택배",
-    "description": "24개 택배사 통합 배송조회 서비스",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://tracking.sweettracker.co.kr/",
-    "provider": "Unknown"
-  },
-  {
     "id": "apiservice-co-kr",
     "category": "배송/물류",
     "name": "실시간 택배조회 서비스",
@@ -1357,13 +1347,13 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "tracker-delivery",
+    "id": "developers-hanjin-com-guides",
     "category": "배송/물류",
-    "name": "Delivery Tracker API",
-    "description": "오픈소스 배송조회 서비스",
-    "auth": "ApiKey",
+    "name": "한진택배 배송조회",
+    "description": "한진택배 배송추적 서비스",
+    "auth": "None",
     "cors": "Unknown",
-    "url": "https://tracker.delivery/",
+    "url": "https://developers.hanjin.com/guides",
     "provider": "Unknown"
   },
   {
@@ -1377,13 +1367,23 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "developers-hanjin-com-guides",
+    "id": "tracker-delivery",
     "category": "배송/물류",
-    "name": "한진택배 배송조회",
-    "description": "한진택배 배송추적 서비스",
-    "auth": "None",
+    "name": "Delivery Tracker API",
+    "description": "오픈소스 배송조회 서비스",
+    "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://developers.hanjin.com/guides",
+    "url": "https://tracker.delivery/",
+    "provider": "Unknown"
+  },
+  {
+    "id": "tracking-sweettracker-co-kr",
+    "category": "배송/물류",
+    "name": "SweetTracker 스마트택배",
+    "description": "24개 택배사 통합 배송조회 서비스",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://tracking.sweettracker.co.kr/",
     "provider": "Unknown"
   },
   {
@@ -1407,6 +1407,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "grac-or-kr-openbook-openapi-aspx",
+    "category": "게임/엔터테인먼트",
+    "name": "게임물관리위원회",
+    "description": "게임물 등급분류 정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.grac.or.kr/OpenBook/OpenAPI.aspx",
+    "provider": "Gov"
+  },
+  {
     "id": "openapi-nexon-com",
     "category": "게임/엔터테인먼트",
     "name": "넥슨 Open API",
@@ -1424,26 +1434,6 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://developers.plaync.com/",
-    "provider": "Unknown"
-  },
-  {
-    "id": "developers-neople-co-kr",
-    "category": "게임/엔터테인먼트",
-    "name": "Neople API",
-    "description": "던전앤파이터 게임 데이터",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.neople.co.kr/",
-    "provider": "Unknown"
-  },
-  {
-    "id": "documenter-getpostman-com-view-4028519-2s9y5yrhp4",
-    "category": "게임/엔터테인먼트",
-    "name": "펄어비스 Black Desert API",
-    "description": "검은사막 게임 정보 및 캐릭터 데이터",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://documenter.getpostman.com/view/4028519/2s9Y5YRhp4",
     "provider": "Unknown"
   },
   {
@@ -1467,6 +1457,26 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "documenter-getpostman-com-view-4028519-2s9y5yrhp4",
+    "category": "게임/엔터테인먼트",
+    "name": "펄어비스 Black Desert API",
+    "description": "검은사막 게임 정보 및 캐릭터 데이터",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://documenter.getpostman.com/view/4028519/2s9Y5YRhp4",
+    "provider": "Unknown"
+  },
+  {
+    "id": "developers-neople-co-kr",
+    "category": "게임/엔터테인먼트",
+    "name": "Neople API",
+    "description": "던전앤파이터 게임 데이터",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.neople.co.kr/",
+    "provider": "Unknown"
+  },
+  {
     "id": "developer-riotgames-com-apis",
     "category": "게임/엔터테인먼트",
     "name": "Riot Games API",
@@ -1474,26 +1484,6 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://developer.riotgames.com/apis",
-    "provider": "Unknown"
-  },
-  {
-    "id": "grac-or-kr-openbook-openapi-aspx",
-    "category": "게임/엔터테인먼트",
-    "name": "게임물관리위원회",
-    "description": "게임물 등급분류 정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.grac.or.kr/OpenBook/OpenAPI.aspx",
-    "provider": "Gov"
-  },
-  {
-    "id": "developers-afreecatv-com",
-    "category": "미디어/콘텐츠",
-    "name": "SOOP",
-    "description": "SOOP 방송 리스트, 카테고리 정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.afreecatv.com/?szWork=openapi",
     "provider": "Unknown"
   },
   {
@@ -1507,6 +1497,16 @@ export const apis: ApiItem[] = [
     "provider": "Naver"
   },
   {
+    "id": "kmas-or-kr-guide-openapi",
+    "category": "미디어/콘텐츠",
+    "name": "만화규장각",
+    "description": "최신의 만화/웹툰/작가 정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.kmas.or.kr/guide/openapi",
+    "provider": "Gov"
+  },
+  {
     "id": "kobis-or-kr-kobisopenapi-homepg-main-main-do",
     "category": "미디어/콘텐츠",
     "name": "영화진흥위원회 KOBIS",
@@ -1514,16 +1514,6 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://www.kobis.or.kr/kobisopenapi/homepg/main/main.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "kmdb-or-kr-info-api-apidetail-6",
-    "category": "미디어/콘텐츠",
-    "name": "KMDb 영화상세정보",
-    "description": "한국영화 제명, 제작년도, 제작사, 크레딧, 줄거리, 장르, 키워드 등 상세정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.kmdb.or.kr/info/api/apiDetail/6",
     "provider": "Gov"
   },
   {
@@ -1537,63 +1527,23 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "developers-kakao-com-docs-latest-ko-kakaotalk-message-common",
-    "category": "소셜/커뮤니케이션",
-    "name": "카카오톡 메시지",
-    "description": "카카오톡 텍스트/이미지 메시지 전송",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://developers.kakao.com/docs/latest/ko/kakaotalk-message/common",
-    "provider": "Kakao"
-  },
-  {
-    "id": "developers-kakao-com-docs-latest-ko-kakaotalk-share-common",
-    "category": "소셜/커뮤니케이션",
-    "name": "카카오톡 공유하기",
-    "description": "웹/앱에서 카카오톡으로 콘텐츠 공유",
+    "id": "kmdb-or-kr-info-api-apidetail-6",
+    "category": "미디어/콘텐츠",
+    "name": "KMDb 영화상세정보",
+    "description": "한국영화 제명, 제작년도, 제작사, 크레딧, 줄거리, 장르, 키워드 등 상세정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://developers.kakao.com/docs/latest/ko/kakaotalk-share/common",
-    "provider": "Kakao"
+    "url": "https://www.kmdb.or.kr/info/api/apiDetail/6",
+    "provider": "Gov"
   },
   {
-    "id": "developers-kakao-com-docs-latest-ko-kakaotalk-channel-common",
-    "category": "소셜/커뮤니케이션",
-    "name": "카카오톡 채널",
-    "description": "메시지 발송, 채널 관리",
-    "auth": "OAuth",
+    "id": "developers-afreecatv-com",
+    "category": "미디어/콘텐츠",
+    "name": "SOOP",
+    "description": "SOOP 방송 리스트, 카테고리 정보",
+    "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://developers.kakao.com/docs/latest/ko/kakaotalk-channel/common",
-    "provider": "Kakao"
-  },
-  {
-    "id": "developers-naver-com-docs-login-cafe-api-cafe-api-md",
-    "category": "소셜/커뮤니케이션",
-    "name": "네이버 카페 API",
-    "description": "네이버 카페 글 작성 및 관리",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://developers.naver.com/docs/login/cafe-api/cafe-api.md",
-    "provider": "Naver"
-  },
-  {
-    "id": "developers-naver-com-docs-serviceapi-search-blog-blog-md",
-    "category": "소셜/커뮤니케이션",
-    "name": "네이버 블로그 API",
-    "description": "네이버 블로그 포스팅 API",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://developers.naver.com/docs/serviceapi/search/blog/blog.md",
-    "provider": "Naver"
-  },
-  {
-    "id": "developers-line-biz",
-    "category": "소셜/커뮤니케이션",
-    "name": "라인 API",
-    "description": "LINE Login, Messaging API, LINE Pay, LIFF, MINI App",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://developers.line.biz/",
+    "url": "https://developers.afreecatv.com/?szWork=openapi",
     "provider": "Unknown"
   },
   {
@@ -1607,13 +1557,33 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "developers-hiworks-com",
+    "id": "developers-naver-com-docs-serviceapi-search-blog-blog-md",
     "category": "소셜/커뮤니케이션",
-    "name": "하이웍스 API",
-    "description": "전자결재, 푸시 알림 기업용 협업 도구",
-    "auth": "ApiKey",
+    "name": "네이버 블로그 API",
+    "description": "네이버 블로그 포스팅 API",
+    "auth": "OAuth",
     "cors": "Unknown",
-    "url": "https://developers.hiworks.com/",
+    "url": "https://developers.naver.com/docs/serviceapi/search/blog/blog.md",
+    "provider": "Naver"
+  },
+  {
+    "id": "developers-naver-com-docs-login-cafe-api-cafe-api-md",
+    "category": "소셜/커뮤니케이션",
+    "name": "네이버 카페 API",
+    "description": "네이버 카페 글 작성 및 관리",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://developers.naver.com/docs/login/cafe-api/cafe-api.md",
+    "provider": "Naver"
+  },
+  {
+    "id": "developers-line-biz",
+    "category": "소셜/커뮤니케이션",
+    "name": "라인 API",
+    "description": "LINE Login, Messaging API, LINE Pay, LIFF, MINI App",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://developers.line.biz/",
     "provider": "Unknown"
   },
   {
@@ -1637,6 +1607,46 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "developers-kakao-com-docs-latest-ko-kakaotalk-share-common",
+    "category": "소셜/커뮤니케이션",
+    "name": "카카오톡 공유하기",
+    "description": "웹/앱에서 카카오톡으로 콘텐츠 공유",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.kakao.com/docs/latest/ko/kakaotalk-share/common",
+    "provider": "Kakao"
+  },
+  {
+    "id": "developers-kakao-com-docs-latest-ko-kakaotalk-message-common",
+    "category": "소셜/커뮤니케이션",
+    "name": "카카오톡 메시지",
+    "description": "카카오톡 텍스트/이미지 메시지 전송",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://developers.kakao.com/docs/latest/ko/kakaotalk-message/common",
+    "provider": "Kakao"
+  },
+  {
+    "id": "developers-kakao-com-docs-latest-ko-kakaotalk-channel-common",
+    "category": "소셜/커뮤니케이션",
+    "name": "카카오톡 채널",
+    "description": "메시지 발송, 채널 관리",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://developers.kakao.com/docs/latest/ko/kakaotalk-channel/common",
+    "provider": "Kakao"
+  },
+  {
+    "id": "developers-hiworks-com",
+    "category": "소셜/커뮤니케이션",
+    "name": "하이웍스 API",
+    "description": "전자결재, 푸시 알림 기업용 협업 도구",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.hiworks.com/",
+    "provider": "Unknown"
+  },
+  {
     "id": "kepco-co-kr-home-disclosure-pbdata-pbdatasystem-conts-do",
     "category": "에너지",
     "name": "한국전력 전기요금",
@@ -1644,26 +1654,6 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://www.kepco.co.kr/home/disclosure/pbdata/pbdatasystem/conts.do",
-    "provider": "Unknown"
-  },
-  {
-    "id": "scienceon-kisti-re-kr-apigateway-api-main-mainform-do",
-    "category": "과학/연구",
-    "name": "한국과학기술정보연구원 KISTI",
-    "description": "과학기술 정보 및 연구데이터",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://scienceon.kisti.re.kr/apigateway/api/main/mainForm.do",
-    "provider": "Unknown"
-  },
-  {
-    "id": "api-dbpia-co-kr-openapi-index-do",
-    "category": "과학/연구",
-    "name": "DBpia API",
-    "description": "학술논문 검색 (기관 라이선스)",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://api.dbpia.co.kr/openApi/index.do",
     "provider": "Unknown"
   },
   {
@@ -1687,33 +1677,23 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "smes-go-kr-main-dbcnrs",
-    "category": "기업/비즈니스",
-    "name": "중소벤처기업부 기업정보",
-    "description": "중소기업 지원정책 및 사업정보",
+    "id": "scienceon-kisti-re-kr-apigateway-api-main-mainform-do",
+    "category": "과학/연구",
+    "name": "한국과학기술정보연구원 KISTI",
+    "description": "과학기술 정보 및 연구데이터",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.smes.go.kr/main/dbCnrs",
-    "provider": "Gov"
-  },
-  {
-    "id": "codef-io",
-    "category": "기업/비즈니스",
-    "name": "CODEF 오픈API",
-    "description": "금융, 보험, 통신, 공공기관 스크래핑 API",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://codef.io/",
+    "url": "https://scienceon.kisti.re.kr/apigateway/api/main/mainForm.do",
     "provider": "Unknown"
   },
   {
-    "id": "help-airbridge-io-ko-references-introduction",
-    "category": "기업/비즈니스",
-    "name": "에어브릿지 API",
-    "description": "모바일 앱 마케팅 어트리뷰션 (다중 플랫폼 SDK)",
+    "id": "api-dbpia-co-kr-openapi-index-do",
+    "category": "과학/연구",
+    "name": "DBpia API",
+    "description": "학술논문 검색 (기관 라이선스)",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://help.airbridge.io/ko/references/introduction",
+    "url": "https://api.dbpia.co.kr/openApi/index.do",
     "provider": "Unknown"
   },
   {
@@ -1737,6 +1717,46 @@ export const apis: ApiItem[] = [
     "provider": "Samsung"
   },
   {
+    "id": "help-airbridge-io-ko-references-introduction",
+    "category": "기업/비즈니스",
+    "name": "에어브릿지 API",
+    "description": "모바일 앱 마케팅 어트리뷰션 (다중 플랫폼 SDK)",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://help.airbridge.io/ko/references/introduction",
+    "provider": "Unknown"
+  },
+  {
+    "id": "smes-go-kr-main-dbcnrs",
+    "category": "기업/비즈니스",
+    "name": "중소벤처기업부 기업정보",
+    "description": "중소기업 지원정책 및 사업정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.smes.go.kr/main/dbCnrs",
+    "provider": "Gov"
+  },
+  {
+    "id": "codef-io",
+    "category": "기업/비즈니스",
+    "name": "CODEF 오픈API",
+    "description": "금융, 보험, 통신, 공공기관 스크래핑 API",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://codef.io/",
+    "provider": "Unknown"
+  },
+  {
+    "id": "cloud-gabia-com",
+    "category": "클라우드",
+    "name": "가비아 g클라우드",
+    "description": "CSAP 인증 중소기업 친화적 클라우드",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://cloud.gabia.com/",
+    "provider": "Unknown"
+  },
+  {
     "id": "api-ncloud-docs-com-docs-common-ncpapi",
     "category": "클라우드",
     "name": "네이버 클라우드 플랫폼",
@@ -1757,23 +1777,13 @@ export const apis: ApiItem[] = [
     "provider": "KT"
   },
   {
-    "id": "cloud-gabia-com",
-    "category": "클라우드",
-    "name": "가비아 g클라우드",
-    "description": "CSAP 인증 중소기업 친화적 클라우드",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://cloud.gabia.com/",
-    "provider": "Unknown"
-  },
-  {
-    "id": "docs-klaytnapi-com",
+    "id": "docs-nodit-io",
     "category": "블록체인",
-    "name": "클레이튼 KAS",
-    "description": "노드 운영 없는 블록체인 개발 서비스",
+    "name": "두나무 노딧 API",
+    "description": "블록체인 개발 플랫폼 및 인프라 서비스",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://docs.klaytnapi.com/",
+    "url": "https://docs.nodit.io/",
     "provider": "Unknown"
   },
   {
@@ -1787,13 +1797,13 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "docs-nodit-io",
+    "id": "docs-klaytnapi-com",
     "category": "블록체인",
-    "name": "두나무 노딧 API",
-    "description": "블록체인 개발 플랫폼 및 인프라 서비스",
+    "name": "클레이튼 KAS",
+    "description": "노드 운영 없는 블록체인 개발 서비스",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://docs.nodit.io/",
+    "url": "https://docs.klaytnapi.com/",
     "provider": "Unknown"
   },
   {
@@ -1857,16 +1867,6 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "data-go-kr-data-15094277-openapi-do",
-    "category": "보안",
-    "name": "WHOIS 도메인/IP 정보 API",
-    "description": ".kr 도메인과 IP 주소 WHOIS 정보 조회",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15094277/openapi.do",
-    "provider": "Gov"
-  },
-  {
     "id": "bigdata-policing-kr-page-openapi",
     "category": "보안",
     "name": "지란지교 악성행위 IP API",
@@ -1877,23 +1877,13 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
-    "id": "safe182-go-kr-home-api-guidemain-do",
-    "category": "공공안전",
-    "name": "안전드림 실종/안전 API",
-    "description": "실종자 정보 및 생활안전 정보 제공 (경찰청)",
+    "id": "data-go-kr-data-15094277-openapi-do",
+    "category": "보안",
+    "name": "WHOIS 도메인/IP 정보 API",
+    "description": ".kr 도메인과 IP 주소 WHOIS 정보 조회",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.safe182.go.kr/home/api/guideMain.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "nfa-go-kr-nfa-releaseinformation-0011-0001",
-    "category": "공공안전",
-    "name": "소방청 공공데이터",
-    "description": "화재정보, 구급출동, 소방시설 위치 등 소방안전정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.nfa.go.kr/nfa/releaseinformation/0011/0001/",
+    "url": "https://www.data.go.kr/data/15094277/openapi.do",
     "provider": "Gov"
   },
   {
@@ -1907,6 +1897,26 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "nfa-go-kr-nfa-releaseinformation-0011-0001",
+    "category": "공공안전",
+    "name": "소방청 공공데이터",
+    "description": "화재정보, 구급출동, 소방시설 위치 등 소방안전정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.nfa.go.kr/nfa/releaseinformation/0011/0001/",
+    "provider": "Gov"
+  },
+  {
+    "id": "safe182-go-kr-home-api-guidemain-do",
+    "category": "공공안전",
+    "name": "안전드림 실종/안전 API",
+    "description": "실종자 정보 및 생활안전 정보 제공 (경찰청)",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.safe182.go.kr/home/api/guideMain.do",
+    "provider": "Gov"
+  },
+  {
     "id": "safetydata-go-kr-disaster-data-list2",
     "category": "공공안전",
     "name": "재난안전데이터 공유플랫폼",
@@ -1914,16 +1924,6 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://www.safetydata.go.kr/disaster-data/list2",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-go-kr-data-15000126-openapi-do",
-    "category": "항공",
-    "name": "항공기 운항정보 API",
-    "description": "국내 공항 항공편 실시간 운항정보 조회",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15000126/openapi.do",
     "provider": "Gov"
   },
   {
@@ -1947,6 +1947,26 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "data-go-kr-data-15000126-openapi-do",
+    "category": "항공",
+    "name": "항공기 운항정보 API",
+    "description": "국내 공항 항공편 실시간 운항정보 조회",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15000126/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-go-kr-data-15126268-openapi-do",
+    "category": "물류인프라",
+    "name": "관세청 화물통관정보 API",
+    "description": "수출입 화물 통관 진행 상황 조회",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15126268/openapi.do",
+    "provider": "Gov"
+  },
+  {
     "id": "logi-spot-com-eb-a1-9c-ec-a7-80-ec-8a-a4-ed-8c-9f-open-api-e",
     "category": "물류인프라",
     "name": "로지스팟 물류 Open API",
@@ -1967,16 +1987,6 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "data-go-kr-data-15126268-openapi-do",
-    "category": "물류인프라",
-    "name": "관세청 화물통관정보 API",
-    "description": "수출입 화물 통관 진행 상황 조회",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15126268/openapi.do",
-    "provider": "Gov"
-  },
-  {
     "id": "mtisopenapi-komsa-or-kr",
     "category": "물류인프라",
     "name": "KOMSA MTIS Open API",
@@ -1984,16 +1994,6 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://mtisopenapi.komsa.or.kr/",
-    "provider": "Gov"
-  },
-  {
-    "id": "nongsaro-go-kr-portal-ps-psz-psza-contentmain-ps",
-    "category": "농업/수산",
-    "name": "농촌진흥청 농사로 Open API",
-    "description": "작목별 농업기술, 주간농사정보, 병해충 방제정보 등 다양한 농업 기술정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentMain.ps?menuId=PS00191",
     "provider": "Gov"
   },
   {
@@ -2027,6 +2027,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "nongsaro-go-kr-portal-ps-psz-psza-contentmain-ps",
+    "category": "농업/수산",
+    "name": "농촌진흥청 농사로 Open API",
+    "description": "작목별 농업기술, 주간농사정보, 병해충 방제정보 등 다양한 농업 기술정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.nongsaro.go.kr/portal/ps/psz/psza/contentMain.ps?menuId=PS00191",
+    "provider": "Gov"
+  },
+  {
     "id": "opinet-co-kr-user-custapi-custapiinfo-do",
     "category": "생활경제",
     "name": "주유소 가격 정보",
@@ -2035,16 +2045,6 @@ export const apis: ApiItem[] = [
     "cors": "Unknown",
     "url": "https://www.opinet.co.kr/user/custapi/custApiInfo.do",
     "provider": "Unknown"
-  },
-  {
-    "id": "data-go-kr-dataset-3043385-openapi-do",
-    "category": "생활경제",
-    "name": "한국소비자원 참가격",
-    "description": "생필품 가격 정보 실시간 조회",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.data.go.kr/dataset/3043385/openapi.do",
-    "provider": "Gov"
   },
   {
     "id": "data-gg-go-kr-portal-data-service-selectservicepage-do",
@@ -2057,14 +2057,34 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "data-go-kr-dataset-3043385-openapi-do",
+    "category": "생활경제",
+    "name": "한국소비자원 참가격",
+    "description": "생필품 가격 정보 실시간 조회",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/dataset/3043385/openapi.do",
+    "provider": "Gov"
+  },
+  {
     "id": "openfiscaldata-go-kr-op-ko-ds-uopkodsa06",
     "category": "정부/공공기관",
     "name": "열린재정 재정정보공개시스템",
     "description": "국가 및 지방재정 예산/결산, 보조금, 국고보조사업 정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.openfiscaldata.go.kr/op/ko/ds/UOPKODSA06?utm_source=chatgpt.com",
+    "url": "https://www.openfiscaldata.go.kr/op/ko/ds/UOPKODSA06",
     "provider": "Gov"
+  },
+  {
+    "id": "developers-naver-com-docs-share-navershare",
+    "category": "기업/비즈니스",
+    "name": "공유하기",
+    "description": "네이버 블로그, 카페 공유하기",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.naver.com/docs/share/navershare/",
+    "provider": "Naver"
   },
   {
     "id": "developers-naver-com-products-service-api-search-search-md",
@@ -2084,56 +2104,6 @@ export const apis: ApiItem[] = [
     "auth": "OAuth",
     "cors": "Unknown",
     "url": "https://developers.naver.com/products/login/api/",
-    "provider": "Naver"
-  },
-  {
-    "id": "developers-naver-com-docs-papago-readme-md",
-    "category": "기업/비즈니스",
-    "name": "파파고 번역",
-    "description": "인공신경망 기반 기계 번역",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.naver.com/docs/papago/README.md",
-    "provider": "Naver"
-  },
-  {
-    "id": "developers-naver-com-products-clova-face",
-    "category": "기업/비즈니스",
-    "name": "CLOVA 얼굴인식",
-    "description": "얼굴윤곽/부위/표정/유명인 닮음도 분석",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.naver.com/products/clova/face/",
-    "provider": "Naver"
-  },
-  {
-    "id": "developers-naver-com-docs-serviceapi-datalab-search-search-m",
-    "category": "기업/비즈니스",
-    "name": "데이터랩 검색어트렌드",
-    "description": "통합검색어 트렌드 조회",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.naver.com/docs/serviceapi/datalab/search/search.md",
-    "provider": "Naver"
-  },
-  {
-    "id": "developers-naver-com-docs-utils-captcha-overview",
-    "category": "기업/비즈니스",
-    "name": "캡차 이미지",
-    "description": "자동 입력 방지용 보안 이미지 생성",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.naver.com/docs/utils/captcha/overview/",
-    "provider": "Naver"
-  },
-  {
-    "id": "developers-naver-com-docs-utils-scaptcha-overview",
-    "category": "기업/비즈니스",
-    "name": "음성 캡차",
-    "description": "자동 입력 방지용 음성 보안",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.naver.com/docs/utils/scaptcha/overview/",
     "provider": "Naver"
   },
   {
@@ -2157,14 +2127,64 @@ export const apis: ApiItem[] = [
     "provider": "Naver"
   },
   {
-    "id": "developers-naver-com-docs-share-navershare",
+    "id": "developers-naver-com-docs-serviceapi-datalab-search-search-m",
     "category": "기업/비즈니스",
-    "name": "공유하기",
-    "description": "네이버 블로그, 카페 공유하기",
+    "name": "데이터랩 검색어트렌드",
+    "description": "통합검색어 트렌드 조회",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://developers.naver.com/docs/share/navershare/",
+    "url": "https://developers.naver.com/docs/serviceapi/datalab/search/search.md",
     "provider": "Naver"
+  },
+  {
+    "id": "developers-naver-com-docs-utils-scaptcha-overview",
+    "category": "기업/비즈니스",
+    "name": "음성 캡차",
+    "description": "자동 입력 방지용 음성 보안",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.naver.com/docs/utils/scaptcha/overview/",
+    "provider": "Naver"
+  },
+  {
+    "id": "developers-naver-com-docs-utils-captcha-overview",
+    "category": "기업/비즈니스",
+    "name": "캡차 이미지",
+    "description": "자동 입력 방지용 보안 이미지 생성",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.naver.com/docs/utils/captcha/overview/",
+    "provider": "Naver"
+  },
+  {
+    "id": "developers-naver-com-docs-papago-readme-md",
+    "category": "기업/비즈니스",
+    "name": "파파고 번역",
+    "description": "인공신경망 기반 기계 번역",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.naver.com/docs/papago/README.md",
+    "provider": "Naver"
+  },
+  {
+    "id": "developers-naver-com-products-clova-face",
+    "category": "기업/비즈니스",
+    "name": "CLOVA 얼굴인식",
+    "description": "얼굴윤곽/부위/표정/유명인 닮음도 분석",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.naver.com/products/clova/face/",
+    "provider": "Naver"
+  },
+  {
+    "id": "developers-kakao-com-docs-latest-ko-daum-search-common",
+    "category": "기업/비즈니스",
+    "name": "카카오 검색",
+    "description": "웹, 이미지, 동영상, 블로그 검색",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.kakao.com/docs/latest/ko/daum-search/common",
+    "provider": "Kakao"
   },
   {
     "id": "developers-kakao-com-docs-latest-ko-kakaologin-common",
@@ -2174,36 +2194,6 @@ export const apis: ApiItem[] = [
     "auth": "OAuth",
     "cors": "Unknown",
     "url": "https://developers.kakao.com/docs/latest/ko/kakaologin/common",
-    "provider": "Kakao"
-  },
-  {
-    "id": "developers-kakao-com-docs-latest-ko-kakaotalk-social-common",
-    "category": "기업/비즈니스",
-    "name": "카카오톡 친구",
-    "description": "카카오톡 친구 목록 및 소셜 기능",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://developers.kakao.com/docs/latest/ko/kakaotalk-social/common",
-    "provider": "Kakao"
-  },
-  {
-    "id": "developers-kakao-com-docs-latest-ko-message-common",
-    "category": "기업/비즈니스",
-    "name": "카카오링크",
-    "description": "앱/웹에서 카카오톡으로 메시지 전송",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.kakao.com/docs/latest/ko/message/common",
-    "provider": "Kakao"
-  },
-  {
-    "id": "developers-kakao-com-docs-latest-ko-kakaotalk-message-rest-a",
-    "category": "기업/비즈니스",
-    "name": "카카오톡 메시지",
-    "description": "나에게 보내기, 친구에게 보내기",
-    "auth": "OAuth",
-    "cors": "Unknown",
-    "url": "https://developers.kakao.com/docs/latest/ko/kakaotalk-message/rest-api",
     "provider": "Kakao"
   },
   {
@@ -2217,33 +2207,13 @@ export const apis: ApiItem[] = [
     "provider": "Kakao"
   },
   {
-    "id": "developers-kakaopay-com-docs-payment-online-common",
+    "id": "developers-kakao-com-docs-latest-ko-message-common",
     "category": "기업/비즈니스",
-    "name": "카카오페이",
-    "description": "간편결제 및 정기결제",
+    "name": "카카오링크",
+    "description": "앱/웹에서 카카오톡으로 메시지 전송",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "http://developers.kakaopay.com/docs/payment/online/common",
-    "provider": "Kakao"
-  },
-  {
-    "id": "developers-kakao-com-docs-latest-ko-push-common",
-    "category": "기업/비즈니스",
-    "name": "푸시 알림",
-    "description": "앱 푸시 알림 발송",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.kakao.com/docs/latest/ko/push/common",
-    "provider": "Kakao"
-  },
-  {
-    "id": "developers-kakao-com-docs-latest-ko-daum-search-common",
-    "category": "기업/비즈니스",
-    "name": "카카오 검색",
-    "description": "웹, 이미지, 동영상, 블로그 검색",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.kakao.com/docs/latest/ko/daum-search/common",
+    "url": "https://developers.kakao.com/docs/latest/ko/message/common",
     "provider": "Kakao"
   },
   {
@@ -2264,6 +2234,46 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://developers.kakao.com/docs/latest/ko/kakaomoment/reference",
+    "provider": "Kakao"
+  },
+  {
+    "id": "developers-kakao-com-docs-latest-ko-kakaotalk-message-rest-a",
+    "category": "기업/비즈니스",
+    "name": "카카오톡 메시지",
+    "description": "나에게 보내기, 친구에게 보내기",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://developers.kakao.com/docs/latest/ko/kakaotalk-message/rest-api",
+    "provider": "Kakao"
+  },
+  {
+    "id": "developers-kakao-com-docs-latest-ko-kakaotalk-social-common",
+    "category": "기업/비즈니스",
+    "name": "카카오톡 친구",
+    "description": "카카오톡 친구 목록 및 소셜 기능",
+    "auth": "OAuth",
+    "cors": "Unknown",
+    "url": "https://developers.kakao.com/docs/latest/ko/kakaotalk-social/common",
+    "provider": "Kakao"
+  },
+  {
+    "id": "developers-kakaopay-com-docs-payment-online-common",
+    "category": "기업/비즈니스",
+    "name": "카카오페이",
+    "description": "간편결제 및 정기결제",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "http://developers.kakaopay.com/docs/payment/online/common",
+    "provider": "Kakao"
+  },
+  {
+    "id": "developers-kakao-com-docs-latest-ko-push-common",
+    "category": "기업/비즈니스",
+    "name": "푸시 알림",
+    "description": "앱 푸시 알림 발송",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.kakao.com/docs/latest/ko/push/common",
     "provider": "Kakao"
   }
 ];
