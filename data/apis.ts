@@ -17,16 +17,6 @@ export interface ApiItem {
 
 export const apis: ApiItem[] = [
   {
-    "id": "opendata-hira-or-kr-op-opc-selectopenapiinfoview-do",
-    "category": "정부/공공기관",
-    "name": "건강보험심사평가원 병원정보",
-    "description": "전국 의료기관 기본정보 및 진료과목 정보",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://opendata.hira.or.kr/op/opc/selectOpenApiInfoView.do",
-    "provider": "Gov"
-  },
-  {
     "id": "data-gg-go-kr-portal-data-dataset-searchdatasetpage-do",
     "category": "정부/공공기관",
     "name": "경기데이터드림",
@@ -937,6 +927,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "opendata-hira-or-kr-op-opc-selectopenapiinfoview-do",
+    "category": "의료/건강",
+    "name": "보건의료빅데이터 확장 API",
+    "description": "건강보험심사평가원 의료빅데이터 활용 Open API",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://opendata.hira.or.kr/op/opc/selectOpenApiInfoView.do",
+    "provider": "Gov"
+  },
+  {
     "id": "developer-samsung-com-health",
     "category": "의료/건강",
     "name": "삼성헬스 SDK",
@@ -1495,6 +1495,16 @@ export const apis: ApiItem[] = [
     "cors": "Unknown",
     "url": "https://chzzk.gitbook.io/chzzk",
     "provider": "Naver"
+  },
+  {
+    "id": "news-deepsearch-com",
+    "category": "미디어/콘텐츠",
+    "name": "딥서치 뉴스 API",
+    "description": "국내 150개, 해외 50개 언론사의 뉴스를 수집",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://news.deepsearch.com",
+    "provider": "Unknown"
   },
   {
     "id": "kmas-or-kr-guide-openapi",
