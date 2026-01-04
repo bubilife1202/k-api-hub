@@ -1677,6 +1677,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "archive-much-go-kr-cnts-cont01-page03-do",
+    "category": "과학/연구",
+    "name": "근현대사 아카이브",
+    "description": "박물관 소장품, 역사문화경관, 기록영상 등 근현대사 자료",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://archive.much.go.kr/cnts/cont01/page03.do",
+    "provider": "Gov"
+  },
+  {
     "id": "si-re-kr-content-do",
     "category": "과학/연구",
     "name": "서울연구원 OpenAPI",
@@ -1709,12 +1719,22 @@ export const apis: ApiItem[] = [
   {
     "id": "developers-worksmobile-com-kr",
     "category": "기업/비즈니스",
-    "name": "네이버웍스 경영지원 API",
-    "description": "B2B 업무 자동화, 결재·근태·인사·사업장 관리 통합",
+    "name": "네이버웍스 API",
+    "description": "Bot 사용, 조직 및 그룹 관리, 파일 업로드/다운로드 외 다양한 기능과 리소스",
     "auth": "OAuth",
     "cors": "Unknown",
-    "url": "https://developers.worksmobile.com/kr/",
+    "url": "https://developers.worksmobile.com/kr",
     "provider": "Naver"
+  },
+  {
+    "id": "bizno-net-openapi",
+    "category": "기업/비즈니스",
+    "name": "비즈노 API",
+    "description": "사업자등록번호, 상호명으로 사업자정보 조회",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://bizno.net/openapi",
+    "provider": "Unknown"
   },
   {
     "id": "developer-samsung-com-knox",
@@ -1897,13 +1917,13 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "safemap-go-kr-opna-data-datalist-do",
+    "id": "safemap-go-kr-opna-data-datalistrenew-do",
     "category": "공공안전",
     "name": "생활안전정보",
     "description": "범죄발생현황, 교통사고, 화재, 생활안전시설 위치정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://safemap.go.kr/opna/data/dataList.do",
+    "url": "https://safemap.go.kr/opna/data/dataListRenew.do",
     "provider": "Gov"
   },
   {
