@@ -217,6 +217,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "plus-kipris-or-kr-portal-data-service-list-do",
+    "category": "정부/공공기관",
+    "name": "키프리스 플러스 API",
+    "description": "특허·상표·디자인 등 지식재산권 정보 검색",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://plus.kipris.or.kr/portal/data/service/List.do?subTab=SC001&amp;entYn=N&amp;menuNo=200100",
+    "provider": "Gov"
+  },
+  {
     "id": "kosis-kr-serviceinfo-openapiguide-do",
     "category": "정부/공공기관",
     "name": "통계청 KOSIS",
