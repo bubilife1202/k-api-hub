@@ -917,6 +917,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "nesc-nier-go-kr-ko-html-svc-openapi-explain-do",
+    "category": "날씨/환경",
+    "name": "환경위성센터 API",
+    "description": "환경위성(GEMS) Data, Image 자료 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://nesc.nier.go.kr/ko/html/svc/openapi/explain.do",
+    "provider": "Gov"
+  },
+  {
     "id": "eiass-go-kr-openapiguide-kei-html-chapter04-07-html",
     "category": "날씨/환경",
     "name": "해양환경정보 서비스",
