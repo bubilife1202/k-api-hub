@@ -187,6 +187,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "localdata-go-kr-main-do",
+    "category": "정부/공공기관",
+    "name": "지방행정 인허가 데이터 개방",
+    "description": "전국 자치단체 인허가 데이터셋 (동물, 의료, 문화, 생활 등) 26.4.15부로 폐쇄 (공공데이터 포털에서 제공)",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.localdata.go.kr/main.do",
+    "provider": "Gov"
+  },
+  {
     "id": "gov-kr-openapi-info",
     "category": "정부/공공기관",
     "name": "정부24 공공서비스 API",
