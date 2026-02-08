@@ -17,16 +17,6 @@ export interface ApiItem {
 
 export const apis: ApiItem[] = [
   {
-    "id": "data-gg-go-kr-portal-data-dataset-searchdatasetpage-do",
-    "category": "정부/공공기관",
-    "name": "경기데이터드림",
-    "description": "경기도가 보유한 공공데이터(교통, 복지, 관광, 경제, 교육, 주택 등) 통합 제공 포털",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://data.gg.go.kr/portal/data/dataset/searchDatasetPage.do",
-    "provider": "Gov"
-  },
-  {
     "id": "data-go-kr",
     "category": "정부/공공기관",
     "name": "공공데이터포털",
@@ -134,26 +124,6 @@ export const apis: ApiItem[] = [
     "auth": "OAuth",
     "cors": "Unknown",
     "url": "https://www.mohw.go.kr/menu.es?mid=a10104010100",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-busan-go-kr-bdip-opendata-dataset-do",
-    "category": "정부/공공기관",
-    "name": "부산광역시 빅데이터",
-    "description": "부산시 및 16개 구·군·공공기관의 공공데이터(교육, 공공행정, 문화, 식품, 안전, 교통 등) 통합 제공 포털",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://data.busan.go.kr/bdip/opendata/dataSet.do",
-    "provider": "Gov"
-  },
-  {
-    "id": "data-seoul-go-kr",
-    "category": "정부/공공기관",
-    "name": "서울시 열린데이터광장",
-    "description": "서울시 모든 공공데이터 통합 플랫폼",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://data.seoul.go.kr/",
     "provider": "Gov"
   },
   {
@@ -1807,6 +1777,16 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "opendart-fss-or-kr",
+    "category": "기업/비즈니스",
+    "name": "Open DART API",
+    "description": "상장법인 공시보고서 원문, 주요 재무정보 및 기업 개황 데이터",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://opendart.fss.or.kr/",
+    "provider": "Gov"
+  },
+  {
     "id": "cloud-gabia-com",
     "category": "클라우드",
     "name": "가비아 g클라우드",
@@ -1925,16 +1905,6 @@ export const apis: ApiItem[] = [
     "cors": "Unknown",
     "url": "https://open.law.go.kr/LSO/openApi/guideResult.do?htmlName=lsNwListGuide",
     "provider": "Gov"
-  },
-  {
-    "id": "bigdata-policing-kr-page-openapi",
-    "category": "보안",
-    "name": "지란지교 악성행위 IP API",
-    "description": "피싱/악성코드 IP 주소 정보 조회",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://www.bigdata-policing.kr/page/openapi",
-    "provider": "Unknown"
   },
   {
     "id": "data-go-kr-data-15094277-openapi-do",
