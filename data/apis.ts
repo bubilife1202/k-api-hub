@@ -227,14 +227,14 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
-    "id": "data-go-kr-data-15076872-openapi-do",
+    "id": "data-ex-co-kr",
     "category": "정부/공공기관",
     "name": "한국도로공사 교통정보",
     "description": "실시간 고속도로 교통량 및 교통정보",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://www.data.go.kr/data/15076872/openapi.do",
-    "provider": "Gov"
+    "url": "https://data.ex.co.kr/",
+    "provider": "Unknown"
   },
   {
     "id": "openapi-hrdkorea-or-kr-main",
@@ -675,6 +675,16 @@ export const apis: ApiItem[] = [
     "cors": "Unknown",
     "url": "https://developers.kakaomobility.com/product/api",
     "provider": "Kakao"
+  },
+  {
+    "id": "data-go-kr-data-15076872-openapi-do",
+    "category": "교통",
+    "name": "한국도로공사 실시간 교통량",
+    "description": "고속도로 실시간 영업소별 교통량 정보",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15076872/openapi.do",
+    "provider": "Gov"
   },
   {
     "id": "developers-hyundai-com",
