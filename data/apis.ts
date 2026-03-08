@@ -1717,6 +1717,16 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "krei-re-kr-krei-page-474",
+    "category": "과학/연구",
+    "name": "한국농촌경제연구원 KREI",
+    "description": "농업·농촌 연구보고서 및 정보 조회",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.krei.re.kr/krei/page/474",
+    "provider": "Unknown"
+  },
+  {
     "id": "api-dbpia-co-kr-openapi-index-do",
     "category": "과학/연구",
     "name": "DBpia API",
