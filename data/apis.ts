@@ -27,6 +27,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "fairdata-go-kr-ext-data-useguidance-do",
+    "category": "정부/공공기관",
+    "name": "공정위 데이터포털 FairData",
+    "description": "공정거래위원회 프랜차이즈 가맹사업 오픈API (브랜드별 가맹점·직영점 정보, 매출액, 계약상태 등)",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://fairdata.go.kr/ext/data/useGuidance.do",
+    "provider": "Gov"
+  },
+  {
     "id": "archives-go-kr-next-newsearch-openapi01-do",
     "category": "정부/공공기관",
     "name": "국가기록원 검색 API",
