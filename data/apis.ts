@@ -2007,6 +2007,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "airport-co-kr-www-cms-frcon-index-do",
+    "category": "항공",
+    "name": "한국공항공사(KAC) Open API",
+    "description": "김포·김해·제주 등 14개 국내공항 통합 OpenAPI (운항·주차·소음·상업시설)",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.airport.co.kr/www/cms/frCon/index.do?MENU_ID=1270",
+    "provider": "Unknown"
+  },
+  {
     "id": "data-go-kr-data-15000126-openapi-do",
     "category": "항공",
     "name": "항공기 운항정보 API",
