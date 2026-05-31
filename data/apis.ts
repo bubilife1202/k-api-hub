@@ -557,6 +557,16 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "openapi-krx-co-kr-contents-opp-main-main-index-cmd",
+    "category": "금융/결제",
+    "name": "KRX Data Marketplace Open API",
+    "description": "한국거래소 지수, 주식, 채권, 파생상품 등 시장 데이터",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://openapi.krx.co.kr/contents/OPP/MAIN/main/index.cmd",
+    "provider": "Unknown"
+  },
+  {
     "id": "developers-nonghyup-com-center-ce-1020",
     "category": "금융/결제",
     "name": "NH농협은행 Open API",
@@ -937,6 +947,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "opendata-kwater-or-kr-open-data-guide-view-do",
+    "category": "날씨/환경",
+    "name": "K-water 공공데이터 Open API",
+    "description": "수자원, 댐, 수질, 수도 등 K-water 공공데이터 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://opendata.kwater.or.kr/open/data/guide/view.do",
+    "provider": "Gov"
+  },
+  {
     "id": "nhis-or-kr-nhis-together-wbhaec10800m01-do",
     "category": "의료/건강",
     "name": "국민건강보험공단",
@@ -1164,6 +1184,16 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://www.bigkinds.or.kr/",
+    "provider": "Gov"
+  },
+  {
+    "id": "sgis-kostat-go-kr-developer-html-home-html",
+    "category": "통계/데이터",
+    "name": "SGIS 통계지리정보서비스 Open API",
+    "description": "지도, 경계, 인구·가구·주택·사업체 통계 등 공간통계 데이터",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://sgis.kostat.go.kr/developer/html/home.html",
     "provider": "Gov"
   },
   {
@@ -1807,6 +1837,16 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "dream-kotra-or-kr-kotranews-cms-com-index-do",
+    "category": "기업/비즈니스",
+    "name": "KOTRA 해외시장뉴스 Open API",
+    "description": "해외시장 뉴스, 국가정보, 상품DB 등 해외진출 데이터 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://dream.kotra.or.kr/kotranews/cms/com/index.do?MENU_ID=710",
+    "provider": "Gov"
+  },
+  {
     "id": "opendart-fss-or-kr",
     "category": "기업/비즈니스",
     "name": "Open DART API",
@@ -2134,6 +2174,16 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://www.data.go.kr/dataset/3043385/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "nabostats-go-kr-portal-openapi-openapiintropage-do",
+    "category": "정부/공공기관",
+    "name": "NABOSTATS Open API",
+    "description": "국회예산정책처 재정·경제통계 데이터 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.nabostats.go.kr/portal/openapi/openApiIntroPage.do",
     "provider": "Gov"
   },
   {
