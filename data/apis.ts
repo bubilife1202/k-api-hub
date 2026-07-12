@@ -2197,16 +2197,6 @@ export const apis: ApiItem[] = [
     "provider": "Naver"
   },
   {
-    "id": "developers-naver-com-docs-utils-shortenurl",
-    "category": "기업/비즈니스",
-    "name": "단축URL",
-    "description": "URL을 me2.do 형태로 단축",
-    "auth": "ApiKey",
-    "cors": "Unknown",
-    "url": "https://developers.naver.com/docs/utils/shortenurl/",
-    "provider": "Naver"
-  },
-  {
     "id": "developers-naver-com-docs-serviceapi-datalab-search-search-m",
     "category": "기업/비즈니스",
     "name": "데이터랩 검색어트렌드",
