@@ -617,13 +617,13 @@ export const apis: ApiItem[] = [
     "provider": "Kakao"
   },
   {
-    "id": "developers-kakaomobility-com-product-api",
+    "id": "developers-kakaomobility-com-product-naviapi-html",
     "category": "교통",
     "name": "카카오모빌리티 길찾기",
     "description": "모빌리티 서비스 개발용 기술제품",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://developers.kakaomobility.com/product/api",
+    "url": "https://developers.kakaomobility.com/product/naviapi.html",
     "provider": "Kakao"
   },
   {
@@ -1304,6 +1304,16 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://devcenter.nhn-commerce.com/",
+    "provider": "Unknown"
+  },
+  {
+    "id": "developers-yes24-com",
+    "category": "쇼핑/커머스",
+    "name": "예스24 Open API",
+    "description": "예스24 상품검색 및 베스트셀러 API",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://developers.yes24.com",
     "provider": "Unknown"
   },
   {
@@ -2267,13 +2277,13 @@ export const apis: ApiItem[] = [
     "provider": "Kakao"
   },
   {
-    "id": "developers-kakao-com-docs-latest-ko-message-common",
+    "id": "developers-kakao-com-docs-ko-kakaotalk-message-common",
     "category": "기업/비즈니스",
     "name": "카카오링크",
     "description": "앱/웹에서 카카오톡으로 메시지 전송",
     "auth": "ApiKey",
     "cors": "Unknown",
-    "url": "https://developers.kakao.com/docs/latest/ko/message/common",
+    "url": "https://developers.kakao.com/docs/ko/kakaotalk-message/common",
     "provider": "Kakao"
   },
   {
