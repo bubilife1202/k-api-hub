@@ -687,6 +687,16 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "its-go-kr-opendata",
+    "category": "교통",
+    "name": "ITS 국가교통정보센터 Open Data API",
+    "description": "전국 교통소통, 돌발상황, CCTV, 교통예측, VDS·VMS 등 국가 교통정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.its.go.kr/opendata/",
+    "provider": "Gov"
+  },
+  {
     "id": "apihub-kma-go-kr",
     "category": "날씨/환경",
     "name": "기상청 API허브",
