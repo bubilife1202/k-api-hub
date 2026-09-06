@@ -307,6 +307,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "fsc-go-kr-in060301",
+    "category": "금융/결제",
+    "name": "금융위원회 금융공공데이터 Open API",
+    "description": "기업·금융회사·공시·자본시장·시세·금융상품 등 10개 주제 110개 API 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.fsc.go.kr/in060301",
+    "provider": "Gov"
+  },
+  {
     "id": "developers-pay-naver-com",
     "category": "금융/결제",
     "name": "네이버페이 API",
