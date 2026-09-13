@@ -1157,6 +1157,16 @@ export const apis: ApiItem[] = [
     "provider": "Gov"
   },
   {
+    "id": "komount-or-kr-html-index-do",
+    "category": "문화/관광",
+    "name": "한국등산·트레킹지원센터 숲길 Open API",
+    "description": "국가숲길·100대명산·백두대간·9정맥의 코스·노면·위험지역 및 문화·관광·교통 POI 17개 API",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://komount.or.kr/html/index.do?html=public_data2",
+    "provider": "Gov"
+  },
+  {
     "id": "kcisa-kr-kr-contents-open-opendata-view-do",
     "category": "문화/관광",
     "name": "한국문화정보원",
