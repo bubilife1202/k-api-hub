@@ -1137,6 +1137,26 @@ export const apis: ApiItem[] = [
     "provider": "Unknown"
   },
   {
+    "id": "data-go-kr-data-15134735-openapi-do",
+    "category": "부동산",
+    "name": "건축HUB 건축물대장정보",
+    "description": "건축물대장 기본개요·총괄표제부·표제부·층별개요·전유공용면적 등 조회",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15134735/openapi.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-go-kr-data-15136560-openapi-do",
+    "category": "부동산",
+    "name": "건축HUB 주택인허가정보",
+    "description": "주택건설사업계획승인과 동·층·호별 개요, 주차장·부대복리시설 정보 조회",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.data.go.kr/data/15136560/openapi.do",
+    "provider": "Gov"
+  },
+  {
     "id": "emuseum-go-kr-openapi",
     "category": "문화/관광",
     "name": "국립중앙박물관 e뮤지엄",
@@ -1394,6 +1414,16 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://various.foodsafetykorea.go.kr/nutrient/industry/openApi/info.do",
+    "provider": "Gov"
+  },
+  {
+    "id": "data-mafra-go-kr-majorpublicdata-indexmajorpublicdata-do",
+    "category": "음식/음료",
+    "name": "안심식당 정보",
+    "description": "지자체가 지정한 안심식당의 위치와 위생 관련 정보 제공",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://data.mafra.go.kr/majorpublicdata/indexMajorPublicData.do",
     "provider": "Gov"
   },
   {
@@ -1824,6 +1854,16 @@ export const apis: ApiItem[] = [
     "auth": "ApiKey",
     "cors": "Unknown",
     "url": "https://opendart.fss.or.kr/",
+    "provider": "Gov"
+  },
+  {
+    "id": "work24-go-kr-cm-e-a-0110-selectopenapiintro-do",
+    "category": "기업/비즈니스",
+    "name": "고용24 Open API",
+    "description": "채용·직업정보와 직업훈련 과정 조회 (기업회원 신청·인증키 심사 필요)",
+    "auth": "ApiKey",
+    "cors": "Unknown",
+    "url": "https://www.work24.go.kr/cm/e/a/0110/selectOpenApiIntro.do",
     "provider": "Gov"
   },
   {
